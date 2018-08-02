@@ -1,0 +1,278 @@
+<html class="antialiased" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="" type="image/png">
+    <title>
+      Titip Beli
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    <script src="https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../public/assets/css/style.css">
+    <script src="../public/assets/javascripts/script.js"></script>
+  </head>
+  <body>
+    <script>
+      AOS.init();
+    </script>
+    <div class="header-area shadow-md">
+      <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-4">
+          <div class="flex-grow flex-wrap flex-shrink mr-auto">
+            <a href="./homepage.html">
+              <img src="../public/assets/img/titip-beli.png" alt="" width="160" class="mt10 mb10">
+            </a>
+          </div>
+          <div class="block lg:hidden">
+            <button class="flex items-center px-3 py-2 border rounded text-purple border-purple hover:text-purple hover:border-purple" onclick="myFunction()">
+              <a href="javascript:void(0);" class="icon-bars"></a>
+                <i class="fas fa-bars"></i>
+              </a>
+            </button>
+          </div>
+          <div class="w-full block lg:flex lg:items-center lg:w-auto">
+            <div class="top-nav lg:pt-3 lg:pb-3" style="position:relative;" id="my-top-nav">
+              <a href="./browse.html" class="no block mt-4 lg:inline-block lg:mt-0 mr-4">
+                browse
+              </a>
+              <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                post request
+              </a>
+              <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                post travel
+              </a>
+              <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                inbox
+              </a>
+              <a href="#responsive-header" class="no dropbtn nav-lang lg:pt-3 lg:pb-3 lg:pl-6 lg:ml-4 block mt-4 lg:inline-block lg:mt-0" onclick="myDropdown()">
+                cinderella
+                <i class="fa fa-caret-down"></i>
+              </a>
+              <div class="dropdown-content" id="my-dropdown">
+                <a href="#">profil</a>
+                <a href="#">purchases</a>
+                <a href="#">trips</a>
+                <a href="#">credit</a>
+                <a href="#">wallet</a>
+                <a href="#">setting</a>
+                <a href="#">logout</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="destiny pt-20 pb-20">
+      <div class="container mx-auto pl-2">
+        <div class="top-text">
+          <h2 align="center" class="font-bold pl-2 pt-12 pb-4 mt-4 mb-4" data-aos="fade-up" data-aos-duration="800">
+            Request Berdasarkan Negara
+          </h2>
+        </div>
+        <form action="/en/entity/" method="get" class="mt-20 mb-20" data-aos="fade-up" data-aos-duration="1000">
+          <div class="flex flex-wrap">
+            <div class="lg:w-full">
+              <div class="search-container mx-auto justify-center">
+                <input type="search" name="q" placeholder="Mau titip sesuatu?" class="search" autocomplete="off">
+                <button type="submit">search</button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="flex flex-wrap pt-2">
+          <div class="w-full lg:w-1/4 md:w-1/2 p-4" data-aos="fade-up" data-aos-duration="1200">
+            <a id="KoreaSelatan" href="/id/search?sourceCountry=KoreaSelatan" style="padding: 0" align="center">
+              <div class="bg-white rounded overflow-hidden shadow-lg">
+                <img class="home-card-img" style="filter: brightness(90%);" src="../public/assets/img/korea-selatan.jpg">
+              </div>
+              <div class="text-center">
+                <div class="destiny-header">
+                  <p>Korea Selatan </p>
+                </div>
+                <!-- <div class="destiny-body">
+                  <p class="text-center m-5">100 requests
+                  35 travellers</p>
+                </div> -->
+                <div class="hr-bottom mx-auto">
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="w-full lg:w-1/4 md:w-1/2 p-4" data-aos="fade-up" data-aos-duration="1400">
+            <a id="KoreaSelatan" href="/id/search?sourceCountry=KoreaSelatan" style="padding: 0" align="center">
+              <div class="bg-white rounded overflow-hidden shadow-lg">
+                <img class="home-card-img" style="filter: brightness(90%);" src="../public/assets/img/korea-selatan.jpg">
+              </div>
+              <div class="text-center">
+                <div class="destiny-header">
+                  <p>Korea Selatan </p>
+                </div>
+                <!-- <div class="destiny-body">
+                  <p class="text-center m-5">100 requests
+                  35 travellers</p>
+                </div> -->
+                <div class="hr-bottom mx-auto">
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="w-full lg:w-1/4 md:w-1/2 p-4" data-aos="fade-up" data-aos-duration="1600">
+            <a id="KoreaSelatan" href="/id/search?sourceCountry=KoreaSelatan" style="padding: 0" align="center">
+              <div class="bg-white rounded overflow-hidden shadow-lg">
+                <img class="home-card-img" style="filter: brightness(90%);" src="../public/assets/img/korea-selatan.jpg">
+              </div>
+              <div class="text-center">
+                <div class="destiny-header">
+                  <p>Korea Selatan </p>
+                </div>
+                <!-- <div class="destiny-body">
+                  <p class="text-center m-5">100 requests
+                  35 travellers</p>
+                </div> -->
+                <div class="hr-bottom mx-auto">
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="w-full lg:w-1/4 md:w-1/2 p-4" data-aos="fade-up" data-aos-duration="1800">
+            <a id="KoreaSelatan" href="/id/search?sourceCountry=KoreaSelatan" style="padding: 0" align="center">
+              <div class="bg-white rounded overflow-hidden shadow-lg">
+                <img class="home-card-img" style="filter: brightness(90%);" src="../public/assets/img/korea-selatan.jpg">
+              </div>
+              <div class="text-center">
+                <div class="destiny-header">
+                  <p>Korea Selatan </p>
+                </div>
+                <!-- <div class="destiny-body">
+                  <p class="text-center m-5">100 requests
+                  35 travellers</p>
+                </div> -->
+                <div class="hr-bottom mx-auto">
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="w-full lg:w-1/4 md:w-1/2 p-4" data-aos="fade-up" data-aos-duration="2000">
+            <a id="KoreaSelatan" href="/id/search?sourceCountry=KoreaSelatan" style="padding: 0" align="center">
+              <div class="bg-white rounded overflow-hidden shadow-lg">
+                <img class="home-card-img" style="filter: brightness(90%);" src="../public/assets/img/korea-selatan.jpg">
+              </div>
+              <div class="text-center">
+                <div class="destiny-header">
+                  <p>Korea Selatan </p>
+                </div>
+                <!-- <div class="destiny-body">
+                  <p class="text-center m-5">100 requests
+                  35 travellers</p>
+                </div> -->
+                <div class="hr-bottom mx-auto">
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="w-full lg:w-1/4 md:w-1/2 p-4" data-aos="fade-up" data-aos-duration="2200">
+            <a id="KoreaSelatan" href="/id/search?sourceCountry=KoreaSelatan" style="padding: 0" align="center">
+              <div class="bg-white rounded overflow-hidden shadow-lg">
+                <img class="home-card-img" style="filter: brightness(90%);" src="../public/assets/img/korea-selatan.jpg">
+              </div>
+              <div class="text-center">
+                <div class="destiny-header">
+                  <p>Korea Selatan </p>
+                </div>
+                <!-- <div class="destiny-body">
+                  <p class="text-center m-5">100 requests
+                  35 travellers</p>
+                </div> -->
+                <div class="hr-bottom mx-auto">
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="w-full lg:w-1/4 md:w-1/2 p-4" data-aos="fade-up" data-aos-duration="2400">
+            <a id="KoreaSelatan" href="/id/search?sourceCountry=KoreaSelatan" style="padding: 0" align="center">
+              <div class="bg-white rounded overflow-hidden shadow-lg">
+                <img class="home-card-img" style="filter: brightness(90%);" src="../public/assets/img/korea-selatan.jpg">
+              </div>
+              <div class="text-center">
+                <div class="destiny-header">
+                  <p>Korea Selatan </p>
+                </div>
+                <!-- <div class="destiny-body">
+                  <p class="text-center m-5">100 requests
+                  35 travellers</p>
+                </div> -->
+                <div class="hr-bottom mx-auto">
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="w-full lg:w-1/4 md:w-1/2 p-4" data-aos="fade-up" data-aos-duration="2600">
+            <a id="KoreaSelatan" href="/id/search?sourceCountry=KoreaSelatan" style="padding: 0" align="center">
+              <div class="bg-white rounded overflow-hidden shadow-lg">
+                <img class="home-card-img" style="filter: brightness(90%);" src="../public/assets/img/korea-selatan.jpg">
+              </div>
+              <div class="text-center">
+                <div class="destiny-header">
+                  <p>Korea Selatan </p>
+                </div>
+                <div class="hr-bottom mx-auto">
+                </div>
+                <!-- <div class="destiny-body">
+                  <p class="text-center mt-2">100 requests
+                  <br class="mt-2">35 travellers</p>
+                </div> -->
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hr-1 mt-8"></div>
+    <footer>
+      <div class="container mx-auto pl-4">
+        <div class="flex flex-wrap mt-20">
+          <div class="sm:w-full lg:w-3/5 pb-6">
+            <p class="about align-right">
+              <span class="inline-block align-left mr-40 mt-2 about">
+                About us:
+                <br>
+                <div class="mt-4"></div>
+                <i class="fas fa-home text-white"> </i>
+                Jl. Laksda Adisucipto No. 27 Demangan, Yogyakarta 55221 
+                <br>
+                <div class="mt-2"></div>
+                <i class="fas fa-phone-square text-white"> </i>
+                +62 811 2525 223
+                <div class="mt-2"></div>
+                <i class="fas fa-envelope text-white"></i>
+                hello@titip-beli.com
+              </span>
+            </p>
+          </div>
+          <div class="sm:w-full lg:w-2/5 pb-6 mt-1">
+            <p class="footer-links" style="line-height: 1.8em;">
+              <a href="#">Aturan Penggunaan</a>
+              <span class="separator">•</span>
+              <a href="#">Kebijakan Privasi</a>
+              <span class="separator">•</span>
+              <a href="#">Syarat dan Ketentuan</a>
+              <span class="separator">•</span>
+              <a href="#">Laporkan</a>
+              <span class="separator">•</span>
+              <a href="#">FAQ</a>
+            </p>
+            <p class="mt-6 copyright" style="line-height: 1.8">
+              Copyright © 2018 Titip Beli. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
