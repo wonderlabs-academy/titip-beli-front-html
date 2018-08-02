@@ -1,0 +1,287 @@
+<html class="antialiased" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="" type="image/png">
+    <title>
+      Titip Beli
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    <script src="https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../public/assets/css/style.css">
+    <script src="../public/assets/javascripts/script.js"></script>
+  </head>
+  <body>
+    <script>
+      AOS.init();
+    </script>
+    <div class="header-area shadow-md">
+      <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-4">
+          <div class="flex-grow flex-wrap flex-shrink mr-auto">
+            <a href="./homepage.html">
+              <img src="../public/assets/img/titip-beli.png" alt="" width="160" class="mt10 mb10">
+            </a>
+          </div>
+          <div class="block lg:hidden">
+            <button class="flex items-center px-3 py-2 border rounded text-purple border-purple hover:text-purple hover:border-purple" onclick="myFunction()">
+              <a href="javascript:void(0);" class="icon-bars"></a>
+                <i class="fas fa-bars"></i>
+              </a>
+            </button>
+          </div>
+          <div class="w-full block lg:flex lg:items-center lg:w-auto">
+            <div class="top-nav lg:pt-3 lg:pb-3" style="position:relative;" id="my-top-nav">
+              <a href="./browse.html" class="no block mt-4 lg:inline-block lg:mt-0 mr-4">
+                browse
+              </a>
+              <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                post request
+              </a>
+              <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                post travel
+              </a>
+              <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                inbox
+              </a>
+              <a href="#responsive-header" class="no dropbtn nav-lang lg:pt-3 lg:pb-3 lg:pl-6 lg:ml-4 block mt-4 lg:inline-block lg:mt-0" onclick="myDropdown()">
+                cinderella
+                <i class="fa fa-caret-down"></i>
+              </a>
+              <div class="dropdown-content" id="my-dropdown">
+                <a href="#">profil</a>
+                <a href="#">purchases</a>
+                <a href="#">trips</a>
+                <a href="#">credit</a>
+                <a href="#">wallet</a>
+                <a href="#">setting</a>
+                <a href="#">logout</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="destiny my-8 pt-20 pb-20">
+      <div class="container mx-auto p-4 shadow-lg">
+        <div class="top-text border-b border-purple">
+          <h2 align="center" class="font-bold pl-2 pt-4 pb-6 mt-4 mb-4" data-aos="fade-up" data-aos-duration="800">
+            <i class="fas fa-shopping-cart color-purple"></i> POST REQUEST
+          </h2>
+        </div>
+        <form class="sm:px-4">
+          <div class="md:flex mb-8 mt-2">
+            <div class="md:w-1/3 sm:w-full sm:py-4 sm:border-b md:border-0">
+              <legend class="uppercase tracking-wide text-sm">Detail Barang</legend>
+              <p class="text-xs font-light text-red">This entire section is required.</p>
+            </div>
+          <div class="md:flex-1 mt-2 mb:mt-0 md:px-3">
+            <div class="mb-4">
+              <label class="block uppercase tracking-wide text-xs font-bold my-2">Nama Barang</label>
+              <input class="shadow appearance-none border rounded w-2/3 py-2 px-3 text-grey-darker leading-tight" id="" type="text" placeholder="">
+            </div>
+            <div class="mb-4">
+              <label class="block uppercase tracking-wide text-xs font-bold my-1">Gambar Barang</label>
+              <img src="http://skyedazzle.com/wp-content/themes/panama/assets/img/empty/600x600.png" class="w-1/3 my-1" alt="" id=""></img>
+              <input class="shadow appearance-none border rounded w-2/3 py-2 px-3 text-grey-darker leading-tight my-1" id="" type="file" placeholder="">
+            </div>
+            <div class="mb-4">
+              <label class="block uppercase tracking-wide text-xs font-bold my-1">Jumlah</label>
+              <input type="text" class"shadow appearance-none border rounded w-2/3 py-2 px-3 text-grey-darker leading-tight my-1" value="1" id="count">
+              <input type="button" value="-" id="minus" onclick="minus()">
+              <input type="button" value="+" id="plus" onclick="plus()">
+            </div>
+            <div class="mb-4">
+              <label class="block uppercase tracking-wide text-xs font-bold my-1">Deskripsi Barang</label>
+              <textarea class="w-full shadow p-4 border-0" placeholder="" rows="6"></textarea>
+            </div>
+            <div class="mb-4">
+              <label class="block uppercase tracking-wide text-xs font-bold my-1">Kategori</label>
+              <button class="color-purple p-3 rounded text-white shadow-inner">
+                <span>Show options</span>
+        
+                <svg class="h-4" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                  <g>
+                    <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
+                  </g>
+                </svg>
+              </button>
+              <div class="rounded shadow-md mt-2 pin-t pin-l min-w-full">
+                  <ul class="list-reset">
+                    <li><a href="#" class="px-4 py-2 block text-black hover:bg-grey-light">Makanan</a></li>
+                    <li><a href="#" class="px-4 py-2 block text-black hover:bg-grey-light">Kosmetik</a></li>
+                    <li><a href="#" class="px-4 py-2 block text-black hover:bg-grey-light">Mainan</a></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="md:flex mb-8">
+            <div class="md:w-1/3 sm:w-full sm:py-4 sm:border-b md:border-0">
+              <legend class="uppercase tracking-wide text-sm">Karakteristik Barang</legend>
+              <p class="text-xs font-light text-red">This entire section is required.</p>
+            </div>
+            <div class="md:flex-1 mt-2 mb:mt-0 md:px-3">
+              <div class="md:flex mb-4 sm:flex sm:justify-between">
+                <div class="md:flex-1 md:pr-3 sm:flex sm:w-1/2">
+                  <label class="block uppercase tracking-wide text-charcoal-darker text-xs font-bold my-2">Penanganan Khusus &nbsp;&nbsp;</label>
+                  <span class="border rounded-full border-grey flex items-center cursor-pointer w-12 bg-purple-lightest justify-start">
+                    <span class="rounded-full border w-6 h-6 border-grey shadow-inner bg-white shadow"></span>
+                  </span>
+                </div>
+                <div class="md:flex-1 md:pl-3 sm:flex sm:w-1/2 sm:text-right">
+                  <label class="block uppercase tracking-wide text-charcoal-darker text-xs font-bold my-2">Pecah Belah &nbsp;&nbsp;</label>
+                  <span class="border rounded-full border-grey flex items-center cursor-pointer w-12 bg-purple justify-end">
+                    <span class="rounded-full border w-6 h-6 border-grey shadow-inner bg-white shadow"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="mb-4 ">
+                <label class="block uppercase tracking-wide text-xs font-bold my-2">Ukuran Barang</label>
+                <div class="inline-flex">
+                  <button class="bg-purple-lightest hover:bg-purple-lighter text-grey-darkest py-8 px-3 rounded-l">
+                    Kecil
+                    <br>
+                    <i class="mb-8 mt-8 fas fa-mobile-alt"></i>
+                    <br>
+                    20cm x 20cm x 20cm
+                  </button>
+                  <button class="bg-purple-lightest hover:bg-purple-lighter text-grey-darkest py-8 px-3">
+                    Sedang
+                    <br>
+                    <i class="mb-6 mt-6 fas fa-shopping-bag fa-2x"></i>
+                    <br>
+                    20cm x 20cm x 20cm
+                  </button>
+                  <button class="bg-purple-lightest hover:bg-purple-lighter text-grey-darkest py-8 px-3 rounded-r">
+                    Besar
+                    <br>
+                    <i class="mb-4 mt-4 fas fa-suitcase fa-3x"></i>
+                    <br>
+                    20cm x 20cm x 20cm
+                  </button>
+                </div>                      
+              <!-- </div> -->
+              </div>
+              <div class="mb-4">
+                <label class="block uppercase tracking-wide text-xs font-bold my-2">Berat Barang</label>
+                <input type="radio" class="ml-2" name="berat" value="1" checked> 1 kg
+                <input type="radio" class="ml-2" name="berat" value="2"> 2 kg
+                <input type="radio" class="ml-2" name="berat" value="3"> 3 kg  
+                <input type="radio" class="ml-2" name="berat" value="4"> 4 kg
+                <input type="radio" class="ml-2" name="berat" value="5"> 5 kg
+              </div>
+            </div>
+          </div>
+        <div class="md:flex mb-8">
+          <div class="md:w-1/3 sm:w-full sm:py-4 sm:border-b md:border-0">
+            <legend class="uppercase tracking-wide text-sm">Info Pembelian</legend>
+            <p class="text-xs font-light text-red">This entire section is required.</p>
+          </div>
+          <div class="md:flex-1 mt-2 mb:mt-0 md:px-3">
+            <div class="mb-4">
+              <label class="block uppercase tracking-wide text-xs font-bold my-2">Dibeli Dari</label>
+              <input class="shadow appearance-none border rounded w-2/3 py-2 px-3 text-grey-darker leading-tight" id="" type="text" placeholder="">
+            </div>
+            <div class="mb-4">
+              <label class="block uppercase tracking-wide text-xs font-bold my-1">Alamat Pengiriman</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight" id="" type="text" placeholder="">
+            </div>
+          </div>
+        </div>
+        <div class="md:flex mb-8">
+          <div class="md:w-1/3 sm:w-full sm:py-4 sm:border-b md:border-0">
+            <legend class="uppercase tracking-wide text-sm">Detail Harga</legend>
+            <p class="text-xs font-light text-red">This entire section is required.</p>
+          </div>
+          <div class="md:flex-1 mt-2 mb:mt-0 md:px-3">
+            <div class="mb-4 py-2 flex bg-purple-lightest">
+              <div class="w-2/3 px-1 flex">
+                <label class="block uppercase tracking-wide text-xs font-bold my-2">Harga + Tip</label>
+                <label class="block uppercase tracking-wide text-xs font-bold my-2 flex justify-end">Rp.</label>
+              </div>
+              <div class="w-1/3 px-1 text-right">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight text-right" id="" type="text" placeholder="" value="195.000">
+              </div>
+            </div>
+            <div class="mb-4 flex">
+              <div class="w-2/3 px-1 flex">
+                <label class="block uppercase tracking-wide text-xs font-bold my-2">Biaya Jasa</label>
+                <label class="block uppercase tracking-wide text-xs font-bold my-2 flex justify-end">Rp.</label>
+              </div>
+              <div class="w-1/3 px-1 text-right">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight text-right" id="" type="text" placeholder="" value="5.800" readonly>
+              </div>
+            </div>
+            <div class="mb-4 py-2 flex bg-purple-lightest">
+              <div class="w-2/3 px-1 flex">
+                <div class="w-1/2 flex">
+                    <label class="block uppercase tracking-wide text-xs font-bold my-2">Total Yang Harus Dibayar</label>
+                </div>
+                <div class="w-1/2 flex justify-end">
+                    <label class="block uppercase tracking-wide text-xs font-bold my-2 flex text-right">Rp.</label>
+                </div>
+              </div>
+              <div class="w-1/3 px-1 text-right">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight text-right" id="" type="text" placeholder="" value="205.800" readonly>
+              </div>
+            </div>
+          </div>
+        </div>   
+        <div class="flex mb-2 justify-end">
+          <button class="my-2 md:mx-4 rounded-full block text-white text-sm shadow-border bg-purple hover:bg-purple-lighter hover:text-purple text-sm py-3 px-4 font-sans tracking-wide uppercase font-bold">
+            Post Request
+          </button>
+        </div>
+          </form>
+      </div>
+    </div>
+    <div class="hr-1 mt-8"></div>
+    <footer>
+      <div class="container mx-auto pl-4">
+        <div class="flex flex-wrap mt-20">
+          <div class="sm:w-full lg:w-3/5 pb-6">
+            <p class="about align-right">
+              <span class="inline-block align-left mr-40 mt-2 about">
+                About us:
+                <br>
+                <div class="mt-4"></div>
+                <i class="fas fa-home text-white"> </i>
+                Jl. Laksda Adisucipto No. 27 Demangan, Yogyakarta 55221 
+                <br>
+                <div class="mt-2"></div>
+                <i class="fas fa-phone-square text-white"> </i>
+                +62 811 2525 223
+                <div class="mt-2"></div>
+                <i class="fas fa-envelope text-white"></i>
+                hello@titip-beli.com
+              </span>
+            </p>
+          </div>
+          <div class="sm:w-full lg:w-2/5 pb-6 mt-1">
+            <p class="footer-links" style="line-height: 1.8em;">
+              <a href="#">Aturan Penggunaan</a>
+              <span class="separator">•</span>
+              <a href="#">Kebijakan Privasi</a>
+              <span class="separator">•</span>
+              <a href="#">Syarat dan Ketentuan</a>
+              <span class="separator">•</span>
+              <a href="#">Laporkan</a>
+              <span class="separator">•</span>
+              <a href="#">FAQ</a>
+            </p>
+            <p class="mt-6 copyright" style="line-height: 1.8">
+              Copyright © 2018 Titip Beli. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
