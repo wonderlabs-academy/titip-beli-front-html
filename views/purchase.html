@@ -1,0 +1,490 @@
+<html>
+  <head>
+    <title>Purchase</title>
+    <link rel="icon" href="../public/assets/img/titip-beli.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" type="text/css" href="../public/assets/css/style-1.css">
+  </head>
+  <body class="bg-grey-lightest">
+    <script>
+      AOS.init();
+    </script>
+    <div class="container mx-auto" style="color: grey; margin-top: 120px; max-width: 1100px; min-height: 600px;">
+      <div class="header-area shadow-md">
+        <div class="container mx-auto">
+          <nav class="flex items-center justify-between flex-wrap p-4">
+            <div class="flex-grow flex-wrap flex-shrink mr-auto">
+              <a href="./homepage.html">
+                <img src="../public/assets/img/titip-beli.png" alt="" width="160" class="mt10 mb10">
+              </a>
+            </div>
+            <div class="block lg:hidden">
+              <button class="flex items-center px-3 py-2 border rounded text-purple border-purple hover:text-purple hover:border-purple" onclick="myFunction()">
+                <a href="javascript:void(0);" class="icon-bars"></a>
+                  <i class="fas fa-bars"></i>
+                </a>
+              </button>
+            </div>
+            <div class="w-full block lg:flex lg:items-center lg:w-auto">
+              <div class="top-nav lg:pt-3 lg:pb-3" style="position:relative;" id="my-top-nav">
+                <a href="./browse.html" class="no block mt-4 lg:inline-block lg:mt-0 mr-4">
+                  browse
+                </a>
+                <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                  post request
+                </a>
+                <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                  post travel
+                </a>
+                <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                  inbox
+                </a>
+                <a href="#responsive-header" class="no dropbtn nav-lang lg:pt-3 lg:pb-3 lg:pl-6 lg:ml-4 block mt-4 lg:inline-block lg:mt-0" onclick="myDropdown()">
+                  cinderella
+                  <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="dropdown-content" id="my-dropdown">
+                  <a href="#">profil</a>
+                  <a href="#">purchases</a>
+                  <a href="#">trips</a>
+                  <a href="#">credit</a>
+                  <a href="#">wallet</a>
+                  <a href="#">setting</a>
+                  <a href="#">logout</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="p-2 pb-4" data-aos="fade-up" data-aos-duration="800">
+        <span>
+          <a href="#" class="mr-2" style="text-decoration: none;"> 
+            Azma Sholiha 
+          </a>
+          <i class="fa fa-chevron-circle-right mr-2"></i>
+          Purchases
+        </span>
+      </div>
+      <div class="p-2" style="min-height: 60px;" data-aos="fade-up" data-aos-duration="1000">
+        <div class="top-text md:float-left" style="font-size: 30px">
+          <h2>
+            Purchases
+          </h2>
+        </div>
+        <div class="mt-4 md:float-right md:mt-0">
+          <button id="defaultOpen"  class="tablinks border bg-purple p-2 rounded text-white hover:bg-purple-light" onclick="open2(event, 'request')">Request</button>
+          <button class="tablinks border bg-grey-light p-2 rounded text-grey-dark hover:bg-white" onclick="open2(event, 'po')">Pre-orders</button>
+        </div>
+      </div>
+      <div id="request" class="bg-white shadow border tabcontent mb-4" data-aos="fade-up" data-aos-duration="1200">
+        <div class="w-full flex pt-2">
+          <div class="w-full md:flex p-2">
+            <div class="p-2 w-full mb-2 md:w-1/5">
+              <h5>Filter by</h5>
+            </div>
+            <div class="mb-2 mr-2 md:w-1/5">
+              <select class="w-full border" style="min-width: 150px; height: 40px;">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
+            </div>
+            <div class="mb-2 mr-2 md:w-1/5">
+              <select class="w-full border" style="min-width: 150px;  height: 40px;">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
+            </div>
+            <div class="mb-2 mr-2 md:w-1/5">
+              <select class="w-full border" style="min-width: 150px; height: 40px;">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
+            </div>
+            <div class="mb-2 mr-2 md:w-1/5">
+              <button class="w-full border rounded-full bg-purple-light text-white text-sm hover:bg-purple-dark" style="min-width: 150px; height: 40px;">Filter Request</button>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-grey-light"  style="min-height: 400px;">
+          <div class="">
+            <div class="m-4">
+              <div class="flex mb-2">
+                <div class="w-1/5 text-center bg-grey-lightest p-4 border-b-4 border-red">
+                  Date
+                </div>
+                <div class="w-1/5 text-center bg-grey-lightest p-4 border-b-4 border-purple">
+                  Items
+                </div>
+                <div class="w-1/5 text-center bg-grey-lightest p-4 border-b-4 border-green">
+                  Place to buy
+                </div>
+                <div class="w-1/5 text-center bg-grey-lightest p-4 border-b-4 border-blue">
+                  Price
+                </div>
+                <div class="w-1/5 text-center bg-grey-lightest p-4 border-b-4 border-grey-dark">
+                  Destination
+                </div>
+              </div>
+              <a href="#">
+                <div class="flex  bg-grey-lightest border-b border-purple hover:bg-purple-lightest">
+                  <div class="w-1/5 text-center p-8">
+                    12 - 03 - 2018
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Shoes by Shopy Martin
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    France
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    $ 5.000
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Jakarta
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="flex  bg-grey-lightest border-b border-purple hover:bg-purple-lightest">
+                  <div class="w-1/5 text-center p-8">
+                    12 - 03 - 2018
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Shoes by Shopy Martin
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    France
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    $ 5.000
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Jakarta
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="flex  bg-grey-lightest border-b border-purple hover:bg-purple-lightest">
+                  <div class="w-1/5 text-center p-8">
+                    12 - 03 - 2018
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Shoes by Shopy Martin
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    France
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    $ 5.000
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Jakarta
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="flex  bg-grey-lightest border-b border-purple hover:bg-purple-lightest">
+                  <div class="w-1/5 text-center p-8">
+                    12 - 03 - 2018
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Shoes by Shopy Martin
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    France
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    $ 5.000
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Jakarta
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="flex  bg-grey-lightest border-b border-purple hover:bg-purple-lightest">
+                  <div class="w-1/5 text-center p-8">
+                    12 - 03 - 2018
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Shoes by Shopy Martin
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    France
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    $ 5.000
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Jakarta
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="flex  bg-grey-lightest border-b border-purple hover:bg-purple-lightest">
+                  <div class="w-1/5 text-center p-8">
+                    12 - 03 - 2018
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Shoes by Shopy Martin
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    France
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    $ 5.000
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Jakarta
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='po' class=" bg-white shadow border tabcontent mb-4" data-aos="fade-up" data-aos-duration="1400">
+        <div class="w-full flex pt-2">
+          <div class="w-full md:flex p-2">
+            <div class="p-2 w-full mb-2 md:w-1/5">
+              <h5>Filter by</h5>
+            </div>
+            <div class="mb-2 mr-2 md:w-1/5">
+              <select class="w-full border" style="min-width: 150px; height: 40px;">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
+            </div>
+            <div class="mb-2 mr-2 md:w-1/5">
+              <select class="w-full border" style="min-width: 150px;  height: 40px;">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
+            </div>
+            <div class="mb-2 mr-2 md:w-1/5">
+              <select class="w-full border" style="min-width: 150px; height: 40px;">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
+            </div>
+            <div class="mb-2 mr-2 md:w-1/5">
+              <button class="w-full border rounded-full bg-purple-light text-white text-sm hover:bg-purple-dark" style="min-width: 150px; height: 40px;">Filter PO</button>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-grey-light" style="min-height: 400px;">
+          <div class="">
+            <div class="m-4">
+              <div class="flex mb-2">
+                <div class="w-1/5 text-center bg-grey-lightest p-4 border-b-4 border-red">
+                  Personal Shoper
+                </div>
+                <div class="w-1/5 text-center bg-grey-lightest p-4 border-b-4 border-purple">
+                  Items
+                </div>
+                <div class="w-1/5 text-center bg-grey-lightest p-4 border-b-4 border-green">
+                  Place to buy
+                </div>
+                <div class="w-1/5 text-center bg-grey-lightest p-4 border-b-4 border-blue">
+                  Price
+                </div>
+                <div class="w-1/5 text-center bg-grey-lightest p-4 border-b-4 border-grey-dark">
+                  Destination
+                </div>
+              </div>
+              <a href="#">
+                <div class="flex  bg-grey-lightest border-b border-purple hover:bg-purple-lightest">
+                  <div class="w-1/5 text-center p-8">
+                    Mrs. Nina
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Shoes by Shopy Martin
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    France
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    $ 5.000
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Jakarta
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="flex  bg-grey-lightest border-b border-purple hover:bg-purple-lightest">
+                  <div class="w-1/5 text-center p-8">
+                    Mrs. Nina
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Shoes by Shopy Martin
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    France
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    $ 5.000
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Jakarta
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="flex  bg-grey-lightest border-b border-purple hover:bg-purple-lightest">
+                  <div class="w-1/5 text-center p-8">
+                    Mrs. Nina
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Shoes by Shopy Martin
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    France
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    $ 5.000
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Jakarta
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="flex  bg-grey-lightest border-b border-purple hover:bg-purple-lightest">
+                  <div class="w-1/5 text-center p-8">
+                    Mrs. Nina
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Shoes by Shopy Martin
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    France
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    $ 5.000
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Jakarta
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="flex  bg-grey-lightest border-b border-purple hover:bg-purple-lightest">
+                  <div class="w-1/5 text-center p-8">
+                    Mrs. Nina
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Shoes by Shopy Martin
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    France
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    $ 5.000
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Jakarta
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="flex  bg-grey-lightest border-b border-purple hover:bg-purple-lightest">
+                  <div class="w-1/5 text-center p-8">
+                    Mrs. Nina
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Shoes by Shopy Martin
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    France
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    $ 5.000
+                  </div>
+                  <div class="w-1/5 text-center p-8">
+                    Jakarta
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container mx-auto pl-4">
+        <div class="flex flex-wrap mt-20">
+          <div class="sm:w-full lg:w-3/5 pb-6">
+            <p class="about align-right">
+              <span class="inline-block align-left mr-40 mt-2 about">
+                About us:
+                <br>
+                <div class="mt-4"></div>
+                <i class="fas fa-home text-white"> </i>
+                Jl. Laksda Adisucipto No. 27 Demangan, Yogyakarta 55221 
+                <br>
+                <div class="mt-2"></div>
+                <i class="fas fa-phone-square text-white"> </i>
+                +62 811 2525 223
+                <div class="mt-2"></div>
+                <i class="fas fa-envelope text-white"></i>
+                hello@titip-beli.com
+              </span>
+            </p>
+          </div>
+          <div class="sm:w-full lg:w-2/5 pb-6 mt-1">
+            <p class="footer-links" style="line-height: 1.8em;">
+              <a href="#">Aturan Penggunaan</a>
+              <span class="separator">•</span>
+              <a href="#">Kebijakan Privasi</a>
+              <span class="separator">•</span>
+              <a href="#">Syarat dan Ketentuan</a>
+              <span class="separator">•</span>
+              <a href="#">Laporkan</a>
+              <span class="separator">•</span>
+              <a href="#">FAQ</a>
+            </p>
+            <p class="mt-6 copyright" style="line-height: 1.8">
+              Copyright © 2018 Titip Beli. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function open2(evt, purchase) {
+          var i, tabcontent, tablinks;
+
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.add("hidden");
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace("border bg-purple p-2 rounded text-white hover:bg-purple-light", "border bg-grey-light p-2 rounded text-grey-dark hover:bg-white");
+          }
+          document.getElementById(purchase).classList.remove("hidden");
+          evt.currentTarget.className += " border bg-purple p-2 rounded text-white hover:bg-purple-light";           
+      }        
+      document.getElementById("defaultOpen").click();    
+    </script>
+  </body>
+</html>

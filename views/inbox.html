@@ -1,0 +1,259 @@
+<html>
+  <head>
+    <title>Inbox</title>
+    <link rel="icon" href="../public/assets/img/titip-beli.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" type="text/css" href="../public/assets/css/style-1.css">
+  </head>
+  <body  class="bg-grey-lightest">
+    <script>
+      AOS.init();
+    </script>
+    <div class="container mx-auto" style="margin-top: 120px; max-width: 1100px; min-height: 500px;">
+      <div class="header-area shadow-md">
+        <div class="container mx-auto">
+          <nav class="flex items-center justify-between flex-wrap p-4">
+            <div class="flex-grow flex-wrap flex-shrink mr-auto">
+              <a href="./homepage.html">
+                <img src="../public/assets/img/titip-beli.png" alt="" width="160" class="mt10 mb10">
+              </a>
+            </div>
+            <div class="block lg:hidden">
+              <button class="flex items-center px-3 py-2 border rounded text-purple border-purple hover:text-purple hover:border-purple" onclick="myFunction()">
+                <a href="javascript:void(0);" class="icon-bars"></a>
+                  <i class="fas fa-bars"></i>
+                </a>
+              </button>
+            </div>
+            <div class="w-full block lg:flex lg:items-center lg:w-auto">
+              <div class="top-nav lg:pt-3 lg:pb-3" style="position:relative;" id="my-top-nav">
+                <a href="./browse.html" class="no block mt-4 lg:inline-block lg:mt-0 mr-4">
+                  browse
+                </a>
+                <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                  post request
+                </a>
+                <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                  post travel
+                </a>
+                <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                  inbox
+                </a>
+                <a href="#responsive-header" class="no dropbtn nav-lang lg:pt-3 lg:pb-3 lg:pl-6 lg:ml-4 block mt-4 lg:inline-block lg:mt-0" onclick="myDropdown()">
+                  cinderella
+                  <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="dropdown-content" id="my-dropdown">
+                  <a href="#">profil</a>
+                  <a href="#">purchases</a>
+                  <a href="#">trips</a>
+                  <a href="#">credit</a>
+                  <a href="#">wallet</a>
+                  <a href="#">setting</a>
+                  <a href="#">logout</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="m-2 top-text pb-4" align="center" data-aos="fade-up" data-aos-duration="800">
+        <h2> inbox</h2>
+      </div>
+      <div class="hidden md:block mt-2" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container mx-auto flex mt-4">
+            <div class="w-1/2 shadow bg-white border-b" style="margin-right: 5%;">
+              <div class="float-left text-xl border-b-2 border-purple p-4">
+                <p>Notification</p>
+              </div>
+              <div class="float-right p-3">
+                <span>
+                  Sortir     
+                  <select style="min-width: 150px; height: 25px">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+            <div class="w-1/2 shadow bg-white border-b">
+              <div class="float-left text-xl border-b-2 border-purple  p-4">
+                <p>Message</p>
+              </div>
+              <div class="float-right p-4">
+                <span>
+                  Sortir
+                  <select style="min-width: 150px; height: 25px;">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </span>
+              </div>        
+            </div>
+          </div>
+      </div>     
+      <div class="p-2 container mx-auto tab block md:hidden" style="margin-top: 20px;" data-aos="fade-up" data-aos-duration="1200">
+        <ul class="list-reset flex border-b">
+          <a id="defaultOpen" class="tablinks inline-block py-2 px-4 text-blue font-semibold -mb-px border-l border-t border-r rounded-t" onclick="open1(event, 'activity')">Activity</a>
+          <a class="tablinks inline-block py-2 px-4 text-blue hover:text-blue-darker font-semibold" onclick="open1(event, 'message')">Message</a>
+        </ul>
+      </div>
+      <div class="container mx-auto md:flex mb-4" data-aos="fade-up" data-aos-duration="1400">
+        <div id="activity" class="p-4 tabcontent md:block md:w-1/2 md:bg-white md:shadow" style="margin-right: 5%;line-height: 1.5rem;">
+          <a href="#" style="text-decoration : none; ">
+            <div class="flex p-4 border-b">
+              <div class="">
+                <img src="../public/assets/img/Check_icon.png" style="height: 50px; min-width: 50px">
+              </div>
+              <div class="ml-4 pt-2" style="max-width: 400px;">
+                <p>Mau dapat Rp 100.000 Airfrov credit? Bagikan kode referral ke teman kamu sekarang! Klik di sini.</p>
+              </div>          
+            </div>
+          </a>
+          <a href="#" style="text-decoration : none; ">
+            <div class="flex p-4 border-b">
+              <div class="">
+                <img src="../public/assets/img/Check_icon.png" style="height: 50px; min-width: 50px">
+              </div>
+              <div class="ml-4 pt-2" style="max-width: 400px">
+                <p>Mau dapat Rp 100.000 Airfrov credit? Bagikan kode referral ke teman kamu sekarang! Klik di sini.</p>
+              </div>          
+            </div>
+          </a>     
+          <a href="#" style="text-decoration : none; ">
+            <div class="flex p-4 border-b">
+              <div class="">
+                <img src="../public/assets/img/Check_icon.png" style="height: 50px; min-width: 50px">
+              </div>
+              <div class="ml-4 pt-2" style="max-width: 400px;">
+                <p>Mau dapat Rp 100.000 Airfrov credit? Bagikan kode referral ke teman kamu sekarang! Klik di sini.</p>
+              </div>          
+            </div>
+          </a>
+          <a href="#" style="text-decoration : none; ">
+            <div class="flex p-4 border-b">
+              <div class="">
+                <img src="../public/assets/img/Check_icon.png" style="height: 50px; min-width: 50px">
+              </div>
+              <div class="ml-4 pt-2" style="max-width: 400px">
+                <p>Mau dapat Rp 100.000 Airfrov credit? Bagikan kode referral ke teman kamu sekarang! Klik di sini.</p>
+              </div>          
+            </div>
+          </a>   
+        </div>
+        <div id="message" class="p-4 tabcontent md:block md:w-1/2 md:bg-white md:shadow" style="line-height: 1.5rem;">
+          <a href="#"  style="text-decoration : none;">
+            <div class="flex border-b p-4">
+              <div class="">
+                <i class="far fa-envelope" style="font-size: 50px;"></i>
+              </div>
+              <div class="ml-4" style="max-width: 400px">
+                <h4>Indah</h4>
+                <p>Mau dapat Rp 100.000 Airfrov credit? Bagikan kode referral ke teman kamu sekarang! Klik di sini.</p>
+              </div>          
+            </div>
+          </a>
+          <a href="#"  style="text-decoration : none;">
+            <div class="flex border-b p-4">
+              <div class="">
+                <i class="far fa-envelope" style="font-size: 50px;"></i>
+              </div>
+              <div class="ml-4" style="max-width: 400px">
+                <h4>Indah</h4>
+                <p>Mau dapat Rp 100.000 Airfrov credit? Bagikan kode referral ke teman kamu sekarang! Klik di sini.</p>
+              </div>          
+            </div>
+          </a>  
+          <a href="#"  style="text-decoration : none;">
+            <div class="flex border-b p-4">
+              <div class="">
+                <i class="far fa-envelope" style="font-size: 50px;"></i>
+              </div>
+              <div class="ml-4" style="max-width: 400px">
+                <h4>Indah</h4>
+                <p>Mau dapat Rp 100.000 Airfrov credit? Bagikan kode referral ke teman kamu sekarang! Klik di sini.</p>
+              </div>          
+            </div>
+          </a>
+          <a href="#"  style="text-decoration : none;">
+            <div class="flex p-4">
+              <div class="">
+                <i class="far fa-envelope" style="font-size: 50px;"></i>
+              </div>
+              <div class="ml-4" style="max-width: 400px">
+                <h4>Indah</h4>
+                <p>Mau dapat Rp 100.000 Airfrov credit? Bagikan kode referral ke teman kamu sekarang! Klik di sini.</p>
+              </div>          
+            </div>
+          </a> 
+        </div>
+      </div>
+      <script>
+        function open1(evt, cityName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].classList.add("hidden");
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace("inline-block py-2 px-4 text-blue font-semibold -mb-px border-l border-t border-r rounded-t", "inline-block py-2 px-4 text-blue hover:text-blue-darker font-semibold");
+            }
+            document.getElementById(cityName).classList.remove("hidden");
+            evt.currentTarget.className += " inline-block py-2 px-4 text-blue font-semibold -mb-px border-l border-t border-r rounded-t";           
+        }        
+        document.getElementById("defaultOpen").click();
+      </script>
+    </div>
+    <footer>
+      <div class="container mx-auto pl-4">
+        <div class="flex flex-wrap mt-20">
+          <div class="sm:w-full lg:w-3/5 pb-6">
+            <p class="about align-right">
+              <span class="inline-block align-left mr-40 mt-2 about">
+                About us:
+                <br>
+                <div class="mt-4"></div>
+                <i class="fas fa-home text-white"> </i>
+                Jl. Laksda Adisucipto No. 27 Demangan, Yogyakarta 55221 
+                <br>
+                <div class="mt-2"></div>
+                <i class="fas fa-phone-square text-white"> </i>
+                +62 811 2525 223
+                <div class="mt-2"></div>
+                <i class="fas fa-envelope text-white"></i>
+                hello@titip-beli.com
+              </span>
+            </p>
+          </div>
+          <div class="sm:w-full lg:w-2/5 pb-6 mt-1">
+            <p class="footer-links" style="line-height: 1.8em;">
+              <a href="#">Aturan Penggunaan</a>
+              <span class="separator">•</span>
+              <a href="#">Kebijakan Privasi</a>
+              <span class="separator">•</span>
+              <a href="#">Syarat dan Ketentuan</a>
+              <span class="separator">•</span>
+              <a href="#">Laporkan</a>
+              <span class="separator">•</span>
+              <a href="#">FAQ</a>
+            </p>
+            <p class="mt-6 copyright" style="line-height: 1.8">
+              Copyright © 2018 Titip Beli. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
