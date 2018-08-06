@@ -57,3 +57,9 @@ jQuery(function($) {
 	$(window).on('scroll', doAnimations);
   $(window).trigger('scroll');
 });
+
+$(document).ready(function() {
+  $("#lkn").click(function () {
+    $("#metoo").popup();
+  });
+})
