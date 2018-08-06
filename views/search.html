@@ -1,0 +1,390 @@
+<html class="antialiased" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="" type="image/png">
+    <title>
+      Titip Beli
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    <script src="https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../public/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../public/assets/css/setting-style.css">
+    <script src="../public/assets/javascripts/script.js"></script>
+    <script src="../public/assets/javascripts/setting-js.js"></script>
+  </head>
+  <body>
+    <script>
+      AOS.init();
+    </script>
+    <div class="header-area shadow-md">
+      <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-4">
+          <div class="flex-grow flex-wrap flex-shrink mr-auto">
+            <a href="./homepage.html">
+              <img src="../public/assets/img/titip-beli.png" alt="" width="160" class="mt10 mb10">
+            </a>
+          </div>
+          <div class="block lg:hidden">
+            <button class="flex items-center px-3 py-2 border rounded text-purple border-purple hover:text-purple hover:border-purple" onclick="myFunction()">
+              <a href="javascript:void(0);" class="icon-bars"></a>
+                <i class="fas fa-bars"></i>
+              </a>
+            </button>
+          </div>
+          <div class="w-full block lg:flex lg:items-center lg:w-auto">
+            <div class="top-nav lg:pt-3 lg:pb-3" style="position:relative;" id="my-top-nav">
+              <a href="./browse.html" class="no block mt-4 lg:inline-block lg:mt-0 mr-4">
+                browse
+              </a>
+              <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                post request
+              </a>
+              <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                post travel
+              </a>
+              <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                inbox
+              </a>
+              <a href="#responsive-header" class="no dropbtn nav-lang lg:pt-3 lg:pb-3 lg:pl-6 lg:ml-4 block mt-4 lg:inline-block lg:mt-0" onclick="myDropdown()">
+                cinderella
+                <i class="fa fa-caret-down"></i>
+              </a>
+              <div class="dropdown-content" id="my-dropdown">
+                <a href="#">profil</a>
+                <a href="#">purchases</a>
+                <a href="#">trips</a>
+                <a href="#">credit</a>
+                <a href="#">wallet</a>
+                <a href="#">setting</a>
+                <a href="#">logout</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="destiny pt-20 pb-20">
+      <div class="container mx-auto pl-2">
+        <div class="items-center py-2 mb-4 w-full pt-12">
+            <div class="flex flex-wrap">
+              <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                <div class="max-w-md rounded overflow-hidden shadow-lg mr-5 ml-5">
+                  <div id="panelMethodPayout" class="block">
+                    <div class="px-3 py-4 purple-bg text-white">
+                      <h4 class="pl-3">
+                        Jelajahi Kategori
+                      </h4>
+                    </div>
+                    <div class="pl-3 pt-3">
+                      <ul class="px-3 list-reset">
+                        <li class="pb-3">
+                          <a href="">Semua Kategori</a>
+                        </li>
+                        <li class="pb-3">
+                          <a href="">Makan dan Minum</a>
+                        </li>
+                        <li class="pb-3">
+                          <a href="">Barang Koleksi</a>
+                        </li>
+                        <li class="pb-3">
+                          <a href="">Gadget dan Teknologi</a>
+                        </li>
+                        <li class="pb-3">
+                          <a href="">Olahraga</a>
+                        </li>
+                        <li class="pb-3">
+                          <a href="">Ibu dan Anak</a>
+                        </li>
+                        <li class="pb-3">
+                          <a href="">Mainan</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-3/4 px-3">
+                <div class="w-full text-center">
+                  <form action="#">
+                    <div class="flex items-center">
+                      <div class="relative">
+                        <select class="block appearance-none w-full border text-white py-2 px-4 leading-tight purple-bg" id="grid-state"> 
+                          <option>New Mexico</option>
+                          <option>Missouri</option>
+                          <option>Texas</option>
+                        </select>
+                        <div class="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-white">
+                          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </div>
+                      </div>
+                      <input type="text" placeholder="search" class="flex-1 appearance-none border p-2 text-grey-dark focus:outline-none rounded">
+                      <button type="submit" class="appearance-none purple-bg text-white text-base font-semibold tracking-wide p-2 shadow hover:bg-indigo-light border rounded">search</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="w-full text-center">
+                  <form action="#">
+                    <div class="flex flex-wrap items-center py-2 w-full">
+                      <div class="md:w-1/5 mb-6 md:mb-0">
+                        <label class="block text-black text-sm font-bold mb-2" for="username">
+                          Sortir
+                        </label>
+                      </div>
+                      <div class="w-full md:w-2/5 mb-6 md:mb-0 pr-1">
+                        <div class="relative">
+                          <select class="block appearance-none w-full border text-white py-2 px-4 leading-tight purple-bg" id="grid-state"> 
+                            <option>Request</option>
+                            <option>Missouri</option>
+                            <option>Texas</option>
+                          </select>
+                          <div class="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-white">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="w-full md:w-2/5 mb-6 md:mb-0">
+                        <div class="relative">
+                          <select class="block appearance-none w-full border text-white py-2 px-4 leading-tight purple-bg" id="grid-state"> 
+                            <option>Semua Negara</option>
+                            <option>Missouri</option>
+                            <option>Texas</option>
+                          </select>
+                          <div class="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-white">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="w-full text-center">
+                  <form action="#">
+                    <div class="flex flex-wrap items-center py-2 mb-4 w-full">
+                      <label class="block text-black font-bold">
+                        <input class="mr-2 leading-tight" type="checkbox">
+                        <span class="text-sm mr-3">
+                          Open 
+                        </span>
+                      </label>
+                      <label class="block text-black font-bold">
+                        <input class="mr-2 leading-tight" type="checkbox">
+                        <span class="text-sm mr-3">
+                          Offered
+                        </span>
+                      </label>
+                      <label class="block text-black font-bold">
+                        <input class="mr-2 leading-tight" type="checkbox">
+                        <span class="text-sm mr-3">
+                          Accepted
+                        </span>
+                      </label>
+                      <label class="block text-black font-bold">
+                        <input class="mr-2 leading-tight" type="checkbox">
+                        <span class="text-sm mr-3">
+                          Completed
+                        </span>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+                <div class="request">
+                  <div class="container mx-auto pl-2">
+                    <div class="flex flex-wrap pt-2">
+                      <div class="w-full lg:w-1/3 md:w-1/2 pr-4 pt-4" data-aos="fade-up" data-aos-duration="1000">
+                        <a href="./detail-request.html" target="_blank">    
+                          <div class="bg-white rounded overflow-hidden shadow-lg">
+                            <img class="w-auto m-auto block" src="../public/assets/img/korean-skin.jpg">
+                            <div class="px-6 py-4">
+                              <div class="text-lg mb-4">The Everygirl</div>
+                              <div class="flex items-center">
+                                <img class="w-10 h-10 rounded-full mr-4" src="../public/assets/img/profile-pict.jpg">
+                                <div class="text-sm">
+                                  <p class="text-black leading-none mb-2">Korea Utara</p>
+                                  <p class="text-black text-bold">Rp 180.000 (include Tip)</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="w-full lg:w-1/3 md:w-1/2 pr-4 pt-4" data-aos="fade-up" data-aos-duration="1200">
+                        <a href="./detail-request.html" target="_blank">    
+                          <div class="bg-white rounded overflow-hidden shadow-lg">
+                            <img class="w-auto m-auto block" src="../public/assets/img/korean-skin.jpg">
+                            <div class="px-6 py-4">
+                              <div class="text-lg mb-4">The Everygirl</div>
+                              <div class="flex items-center">
+                                <img class="w-10 h-10 rounded-full mr-4" src="../public/assets/img/profile-pict.jpg">
+                                <div class="text-sm">
+                                  <p class="text-black leading-none mb-2">Korea Utara</p>
+                                  <p class="text-black text-bold">Rp 180.000 (include Tip)</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="w-full lg:w-1/3 md:w-1/2 pr-4 pt-4" data-aos="fade-up" data-aos-duration="1400">
+                        <a href="./detail-request.html" target="_blank">    
+                          <div class="bg-white rounded overflow-hidden shadow-lg">
+                            <img class="w-auto m-auto block" src="../public/assets/img/korean-skin.jpg">
+                            <div class="px-6 py-4">
+                              <div class="text-lg mb-4">The Everygirl</div>
+                              <div class="flex items-center">
+                                <img class="w-10 h-10 rounded-full mr-4" src="../public/assets/img/profile-pict.jpg">
+                                <div class="text-sm">
+                                  <p class="text-black leading-none mb-2">Korea Utara</p>
+                                  <p class="text-black text-bold">Rp 180.000 (include Tip)</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="w-full lg:w-1/3 md:w-1/2 pr-4 pt-4" data-aos="fade-up" data-aos-duration="1600">
+                        <a href="./detail-request.html" target="_blank">    
+                          <div class="bg-white rounded overflow-hidden shadow-lg">
+                            <img class="w-auto m-auto block" src="../public/assets/img/korean-skin.jpg">
+                            <div class="px-6 py-4">
+                              <div class="text-lg mb-4">The Everygirl</div>
+                              <div class="flex items-center">
+                                <img class="w-10 h-10 rounded-full mr-4" src="../public/assets/img/profile-pict.jpg">
+                                <div class="text-sm">
+                                  <p class="text-black leading-none mb-2">Korea Utara</p>
+                                  <p class="text-black text-bold">Rp 180.000 (include Tip)</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="w-full lg:w-1/3 md:w-1/2 pr-4 pt-4" data-aos="fade-up" data-aos-duration="1800">
+                        <a href="./detail-request.html" target="_blank">    
+                          <div class="bg-white rounded overflow-hidden shadow-lg">
+                            <img class="w-auto m-auto block" src="../public/assets/img/korean-skin.jpg">
+                            <div class="px-6 py-4">
+                              <div class="text-lg mb-4">The Everygirl</div>
+                              <div class="flex items-center">
+                                <img class="w-10 h-10 rounded-full mr-4" src="../public/assets/img/profile-pict.jpg">
+                                <div class="text-sm">
+                                  <p class="text-black leading-none mb-2">Korea Utara</p>
+                                  <p class="text-black text-bold">Rp 180.000 (include Tip)</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="w-full lg:w-1/3 md:w-1/2 pr-4 pt-4" data-aos="fade-up" data-aos-duration="2000">
+                        <a href="./detail-request.html" target="_blank">    
+                          <div class="bg-white rounded overflow-hidden shadow-lg">
+                            <img class="w-auto m-auto block" src="../public/assets/img/korean-skin.jpg">
+                            <div class="px-6 py-4">
+                              <div class="text-lg mb-4">The Everygirl</div>
+                              <div class="flex items-center">
+                                <img class="w-10 h-10 rounded-full mr-4" src="../public/assets/img/profile-pict.jpg">
+                                <div class="text-sm">
+                                  <p class="text-black leading-none mb-2">Korea Utara</p>
+                                  <p class="text-black text-bold">Rp 180.000 (include Tip)</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="w-full lg:w-1/3 md:w-1/2 pr-4 pt-4" data-aos="fade-up" data-aos-duration="2200">
+                        <a href="./detail-request.html" target="_blank">    
+                          <div class="bg-white rounded overflow-hidden shadow-lg">
+                            <img class="w-auto m-auto block" src="../public/assets/img/korean-skin.jpg">
+                            <div class="px-6 py-4">
+                              <div class="text-lg mb-4">The Everygirl</div>
+                              <div class="flex items-center">
+                                <img class="w-10 h-10 rounded-full mr-4" src="../public/assets/img/profile-pict.jpg">
+                                <div class="text-sm">
+                                  <p class="text-black leading-none mb-2">Korea Utara</p>
+                                  <p class="text-black text-bold">Rp 180.000 (include Tip)</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="w-full lg:w-1/3 md:w-1/2 pr-4 pt-4" data-aos="fade-up" data-aos-duration="2400">
+                        <a href="./detail-request.html" target="_blank">    
+                          <div class="bg-white rounded overflow-hidden shadow-lg">
+                            <img class="w-auto m-auto block" src="../public/assets/img/korean-skin.jpg">
+                            <div class="px-6 py-4">
+                              <div class="text-lg mb-4">The Everygirl</div>
+                              <div class="flex items-center">
+                                <img class="w-10 h-10 rounded-full mr-4" src="../public/assets/img/profile-pict.jpg">
+                                <div class="text-sm">
+                                  <p class="text-black leading-none mb-2">Korea Utara</p>
+                                  <p class="text-black text-bold">Rp 180.000 (include Tip)</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div align="center" class="home p-8" data-aos="fade-up" data-aos-duration="1000">
+                      <button class="rounded-full px-6 py-3 bg-white mr-1">Sebelumnya</button>
+                      <button class="rounded-full px-6 py-3 bg-white ml-1">Berikutnya</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="hr-1 mt-8"></div>
+    <footer >
+      <div class="container mx-auto pl-4">
+        <div class="flex flex-wrap mt-20">
+          <div class="sm:w-full lg:w-3/5 pb-6">
+            <p class="about align-right">
+              <span class="inline-block align-left mr-40 mt-2 about">
+                About us:
+                <br>
+                <div class="mt-4"></div>
+                <i class="fas fa-home text-white"> </i>
+                Jl. Laksda Adisucipto No. 27 Demangan, Yogyakarta 55221 
+                <br>
+                <div class="mt-2"></div>
+                <i class="fas fa-phone-square text-white"> </i>
+                +62 811 2525 223
+                <div class="mt-2"></div>
+                <i class="fas fa-envelope text-white"></i>
+                hello@titip-beli.com
+              </span>
+            </p>
+          </div>
+          <div class="sm:w-full lg:w-2/5 pb-6 mt-1">
+            <p class="footer-links" style="line-height: 1.8em;">
+              <a href="#">Aturan Penggunaan</a>
+              <span class="separator">•</span>
+              <a href="#">Kebijakan Privasi</a>
+              <span class="separator">•</span>
+              <a href="#">Syarat dan Ketentuan</a>
+              <span class="separator">•</span>
+              <a href="#">Laporkan</a>
+              <span class="separator">•</span>
+              <a href="#">FAQ</a>
+            </p>
+            <p class="mt-6 copyright" style="line-height: 1.8">
+              Copyright © 2018 Titip Beli. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
