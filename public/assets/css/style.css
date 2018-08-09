@@ -16,6 +16,14 @@ body {
   background-color: rgb(252, 250, 253);
 }
 
+.color-purple {
+  color: #44318D;
+}
+
+.purple-bg {
+  background-color:  #44318D;
+}
+
 .pb-t {
   padding-bottom: 15rem;
 }

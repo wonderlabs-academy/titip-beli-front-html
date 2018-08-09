@@ -1,0 +1,256 @@
+<html class="antialiased" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="" type="image/png">
+    <title>
+      Titip Beli
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    <script src="https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../public/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../public/assets/css/setting-style.css">
+    <script src="../public/assets/javascripts/script.js"></script>
+    <script src="../public/assets/javascripts/setting-js.js"></script>
+  </head>
+  <body>
+    <script>
+      AOS.init();
+    </script>
+    <div class="header-area shadow-md">
+      <div class="container mx-auto">
+        <nav class="flex items-center justify-between flex-wrap p-4">
+          <div class="flex-grow flex-wrap flex-shrink mr-auto">
+            <a href="./homepage.html">
+              <img src="../public/assets/img/titip-beli.png" alt="" width="160" class="mt10 mb10">
+            </a>
+          </div>
+          <div class="block lg:hidden">
+            <button class="flex items-center px-3 py-2 border rounded text-purple border-purple hover:text-purple hover:border-purple" onclick="myFunction()">
+              <a href="javascript:void(0);" class="icon-bars"></a>
+                <i class="fas fa-bars"></i>
+              </a>
+            </button>
+          </div>
+          <div class="w-full block lg:flex lg:items-center lg:w-auto">
+            <div class="top-nav lg:pt-3 lg:pb-3" style="position:relative;" id="my-top-nav">
+              <a href="./browse.html" class="no block mt-4 lg:inline-block lg:mt-0 mr-4">
+                browse
+              </a>
+              <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                post request
+              </a>
+              <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                post travel
+              </a>
+              <a href="#responsive-header" class="no lg:ml-4 block mt-4 lg:inline-block lg:mt-0 mr-4">
+                inbox
+              </a>
+              <a href="#responsive-header" class="no dropbtn nav-lang lg:pt-3 lg:pb-3 lg:pl-6 lg:ml-4 block mt-4 lg:inline-block lg:mt-0" onclick="myDropdown()">
+                cinderella
+                <i class="fa fa-caret-down"></i>
+              </a>
+              <div class="dropdown-content" id="my-dropdown">
+                <a href="#">profil</a>
+                <a href="#">purchases</a>
+                <a href="#">trips</a>
+                <a href="#">credit</a>
+                <a href="#">wallet</a>
+                <a href="#">setting</a>
+                <a href="#">logout</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="destiny pt-20 pb-20">
+      <div class="container mx-auto pl-2">
+        <div class="m-5 pt-12">
+          <h2>
+            <i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
+            Settings
+          </h2>
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="max-w-md rounded overflow-hidden shadow-lg m-5">
+          <div class="px-6 py-4 purple-bg text-white">
+            <div class="font-bold text-md mb-2">
+              <h4>
+                Payout Method
+                <i id="caretPayout" class="fa fa-caret-down cursor-pointer" onclick="javascript:collapse('panelMethodPayout');"></i>
+              </h4>
+            </div>
+          </div>
+          <div id="panelMethodPayout" class="hidden">
+            <div class="px-6 py-4">
+              <p class="text-grey-darker text-base">
+                Sebagai Personal Shopper, kamu akan menerima uang dari Titip Beli melalui transfer bank dalam waktu 7 hari kerja setelah Requester menerima barang.
+              </p>
+              <div>
+                <form class="mt-4">
+                  <div class="mb-4">
+                    <label class="block text-black text-sm font-bold mb-2" for="username">
+                      Nama Pemegang Rekening
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight" id="username" type="text" placeholder="Username">
+                    <em class="text-grey text-xs italic">Field ini harus diisi</em>
+                  </div>
+                  <div class="mb-4">
+                    <label class="block text-black text-sm font-bold mb-2" for="password">
+                      Bank
+                    </label>
+                    <div class="relative">
+                      <select class="block appearance-none w-full border text-grey-darker py-2 px-4 rounded leading-tight" id="grid-state">
+                        <option>New Mexico</option>
+                        <option>Missouri</option>
+                        <option>Texas</option>
+                      </select>
+                      <div class="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-grey-darker">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                      </div>
+                    </div>
+                    <em class="text-grey text-xs italic">Field ini harus diisi</em>
+                  </div>
+                  <div class="mb-6">
+                    <label class="block text-black text-sm font-bold mb-2" for="password">
+                      Rekening
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight" id="username" type="text" placeholder="Username">
+                    <em class="text-grey text-xs italic">Field ini harus diisi</em>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <button class="bg-green hover:bg-green-dark text-white font-bold py-2 px-4 rounded" type="button">
+                      Save
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-md rounded overflow-hidden shadow-lg m-5">
+          <div class="px-6 py-4 purple-bg text-white">
+            <div class="font-bold text-md mb-2">
+              <h4>
+                Email Notification Testing
+                <i id="caretPayout" class="fa fa-caret-down cursor-pointer" onclick="javascript:collapse('panelSettingNotification');"></i>
+              </h4>
+            </div>
+          </div>
+          <div id="panelSettingNotification" class="hidden">
+            <div class="px-6 py-4">
+              <div>
+                <form class="mt-4">
+                  <div class="items-center border-b border-b-2 border-grey py-2 mb-4 max-w-md w-full">
+                    <div class="flex flex-wrap">
+                      <div class="w-full md:w-1/2 px-3 py-3 mb-6 md:mb-0">
+                        <label class="block  tracking-wide text-black text-xs font-bold mb-2" for="grid-first-name">
+                            Komentar Baru
+                        </label>
+                      </div>
+                      <div class="w-full md:w-1/2 px-3 text-center">
+                        <button id="newComment" class="flex-no-shrink text-sm border-4 text-white py-1 px-2 rounded pr-5 pl-5 bg-green hover:bg-green-dark border-green hover:border-green-dark" type="button" onclick="javascript:switchNotification('newComment');">
+                          Yes
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="items-center border-b border-b-2 border-grey py-2 mb-4 max-w-md w-full">
+                    <div class="flex flex-wrap">
+                      <div class="w-full md:w-1/2 px-3 py-3 mb-6 md:mb-0">
+                        <label class="block tracking-wide text-black text-xs font-bold mb-2" for="grid-first-name">
+                            Followers Baru
+                        </label>
+                      </div>
+                      <div class="w-full md:w-1/2 px-3 text-center">
+                        <button id="newFollowers" class="flex-no-shrink text-sm border-4 text-white py-1 px-2 rounded pr-5 pl-5 bg-green hover:bg-green-dark border-green hover:border-green-dark" type="button" onclick="javascript:switchNotification('newFollowers');">
+                          Yes
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="items-center border-b border-b-2 border-grey py-2 mb-4 max-w-md w-full">
+                    <div class="flex flex-wrap">
+                      <div class="w-full md:w-1/2 px-3 py-3 mb-6 md:mb-0">
+                        <label class="block  tracking-wide text-black text-xs font-bold mb-2" for="grid-first-name">
+                            Request terinspirasi darimu
+                        </label>
+                      </div>
+                      <div class="w-full md:w-1/2 px-3 text-center">
+                        <button id="inspiredRequest" class="flex-no-shrink text-sm border-4 text-white py-1 px-2 rounded pr-5 pl-5 bg-green hover:bg-green-dark border-green hover:border-green-dark" type="button" onclick="javascript:switchNotification('inspiredRequest');">
+                          Yes
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="items-center py-2 mb-4 max-w-md w-full">
+                    <div class="flex flex-wrap">
+                      <div class="w-full md:w-1/2 px-3 py-3 mb-6 md:mb-0">
+                        <label class="block tracking-wide text-black text-xs font-bold mb-2" for="grid-first-name">
+                            Akitivitas user yang kamu ikuti
+                        </label>
+                      </div>
+                      <div class="w-full md:w-1/2 px-3 text-center">
+                        <button id="newPostFollowed" class="flex-no-shrink text-sm border-4 text-white py-1 px-2 rounded pr-5 pl-5 bg-green hover:bg-green-dark border-green hover:border-green-dark" type="button" onclick="javascript:switchNotification('newPostFollowed');">
+                          Yes
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+    <div class="hr-1 mt-8"></div>
+    <footer>
+      <div class="container mx-auto pl-4">
+        <div class="flex flex-wrap mt-20">
+          <div class="sm:w-full lg:w-3/5 pb-6">
+            <p class="about align-right">
+              <span class="inline-block align-left mr-40 mt-2 about">
+                About us:
+                <br>
+                <div class="mt-4"></div>
+                <i class="fas fa-home text-white"> </i>
+                Jl. Laksda Adisucipto No. 27 Demangan, Yogyakarta 55221 
+                <br>
+                <div class="mt-2"></div>
+                <i class="fas fa-phone-square text-white"> </i>
+                +62 811 2525 223
+                <div class="mt-2"></div>
+                <i class="fas fa-envelope text-white"></i>
+                hello@titip-beli.com
+              </span>
+            </p>
+          </div>
+          <div class="sm:w-full lg:w-2/5 pb-6 mt-1">
+            <p class="footer-links" style="line-height: 1.8em;">
+              <a href="#">Aturan Penggunaan</a>
+              <span class="separator">•</span>
+              <a href="#">Kebijakan Privasi</a>
+              <span class="separator">•</span>
+              <a href="#">Syarat dan Ketentuan</a>
+              <span class="separator">•</span>
+              <a href="#">Laporkan</a>
+              <span class="separator">•</span>
+              <a href="#">FAQ</a>
+            </p>
+            <p class="mt-6 copyright" style="line-height: 1.8">
+              Copyright © 2018 Titip Beli. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
