@@ -1,0 +1,132 @@
+html
+  head
+    title Trips
+    link(rel='icon', href='/img/logo-t.png', type='image/png')
+    link(href='https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.2.0/css/all.css', integrity='sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ', crossorigin='anonymous')
+    link(href='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', rel='stylesheet')
+    script(src='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Lato:400,700')
+    link(rel='stylesheet', type='text/css', href='/css/style-1.css')
+  body.bg-grey-lightest
+    script.
+      AOS.init();
+    .container.mx-auto(style='color: grey; margin-top: 120px; max-width: 1100px; min-height: 600px;')
+      include includes/navbar.pug
+      .p-2.pb-4(data-aos='fade-up', data-aos-duration='800')
+        span
+          a.mr-2(href='#', style='text-decoration: none;')
+            | Azma Sholiha
+          i.fa.fa-chevron-circle-right.mr-2
+          |           Trips
+      .p-2(style='min-height: 60px;', data-aos='fade-up', data-aos-duration='1000')
+        .top-text(class='md:float-left', style='font-size: 30px')
+          h2
+            | TRIPS
+      .bg-white.shadow.border.mb-4(data-aos='fade-up', data-aos-duration='1200')
+        .w-full.flex.pt-2
+          .w-full.p-2(class='md:flex')
+            .p-2.w-full.mb-2(class='md:w-1/5')
+              h5 Filter by
+            .mb-2.mr-2(class='md:w-1/5')
+              select.w-full.border(style='min-width: 150px; height: 40px;')
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='opel') Opel
+                option(value='audi') Audi
+            .mb-2.mr-2(class='md:w-1/5')
+              select.w-full.border(style='min-width: 150px;  height: 40px;')
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='opel') Opel
+                option(value='audi') Audi
+            .mb-2.mr-2(class='md:w-1/5')
+              button.w-full.border.rounded-full.bg-purple-light.text-white.text-sm(class='hover:bg-purple-dark', style='min-width: 150px; height: 40px;') Filter Trips
+        .border-t.border-grey-light(style='min-height: 400px;')
+          div
+            .m-0(class='md:m-4', style='overflow-x: auto !important;')
+              .flex.mb-2
+                .text-center.bg-grey-lightest.p-4.border-b-4.border-red(class='w-1/5')
+                  | Date
+                .text-center.bg-grey-lightest.p-4.border-b-4.border-purple(class='w-1/5')
+                  | Items
+                .text-center.bg-grey-lightest.p-4.border-b-4.border-green(class='w-1/5')
+                  | Place to buy
+                .text-center.bg-grey-lightest.p-4.border-b-4.border-blue(class='w-1/5')
+                  | Price
+                .text-center.bg-grey-lightest.p-4.border-b-4.border-grey-dark(class='w-1/5')
+                  | Destination
+              a(href='#')
+                .flex.bg-grey-lightest.border-b.border-purple(class='hover:bg-purple-lightest')
+                  .text-center.p-8(class='w-1/5')
+                    | 12 - 03 - 2018
+                  .text-center.p-8(class='w-1/5')
+                    | Shoes by Shopy Martin
+                  .text-center.p-8(class='w-1/5')
+                    | France
+                  .text-center.p-8(class='w-1/5')
+                    | $ 5.000
+                  .text-center.p-8(class='w-1/5')
+                    | Jakarta
+              a(href='#')
+                .flex.bg-grey-lightest.border-b.border-purple(class='hover:bg-purple-lightest')
+                  .text-center.p-8(class='w-1/5')
+                    | 12 - 03 - 2018
+                  .text-center.p-8(class='w-1/5')
+                    | Shoes by Shopy Martin
+                  .text-center.p-8(class='w-1/5')
+                    | France
+                  .text-center.p-8(class='w-1/5')
+                    | $ 5.000
+                  .text-center.p-8(class='w-1/5')
+                    | Jakarta
+              a(href='#')
+                .flex.bg-grey-lightest.border-b.border-purple(class='hover:bg-purple-lightest')
+                  .text-center.p-8(class='w-1/5')
+                    | 12 - 03 - 2018
+                  .text-center.p-8(class='w-1/5')
+                    | Shoes by Shopy Martin
+                  .text-center.p-8(class='w-1/5')
+                    | France
+                  .text-center.p-8(class='w-1/5')
+                    | $ 5.000
+                  .text-center.p-8(class='w-1/5')
+                    | Jakarta
+              a(href='#')
+                .flex.bg-grey-lightest.border-b.border-purple(class='hover:bg-purple-lightest')
+                  .text-center.p-8(class='w-1/5')
+                    | 12 - 03 - 2018
+                  .text-center.p-8(class='w-1/5')
+                    | Shoes by Shopy Martin
+                  .text-center.p-8(class='w-1/5')
+                    | France
+                  .text-center.p-8(class='w-1/5')
+                    | $ 5.000
+                  .text-center.p-8(class='w-1/5')
+                    | Jakarta
+              a(href='#')
+                .flex.bg-grey-lightest.border-b.border-purple(class='hover:bg-purple-lightest')
+                  .text-center.p-8(class='w-1/5')
+                    | 12 - 03 - 2018
+                  .text-center.p-8(class='w-1/5')
+                    | Shoes by Shopy Martin
+                  .text-center.p-8(class='w-1/5')
+                    | France
+                  .text-center.p-8(class='w-1/5')
+                    | $ 5.000
+                  .text-center.p-8(class='w-1/5')
+                    | Jakarta
+              a(href='#')
+                .flex.bg-grey-lightest.border-b.border-purple(class='hover:bg-purple-lightest')
+                  .text-center.p-8(class='w-1/5')
+                    | 12 - 03 - 2018
+                  .text-center.p-8(class='w-1/5')
+                    | Shoes by Shopy Martin
+                  .text-center.p-8(class='w-1/5')
+                    | France
+                  .text-center.p-8(class='w-1/5')
+                    | $ 5.000
+                  .text-center.p-8(class='w-1/5')
+                    | Jakarta
+    include includes/footer.pug

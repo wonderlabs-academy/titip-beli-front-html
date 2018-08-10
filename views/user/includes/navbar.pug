@@ -1,0 +1,32 @@
+.header-area.shadow-md
+  .container.mx-auto
+    nav.flex.items-center.justify-between.flex-wrap.p-4
+      .flex-grow.flex-wrap.flex-shrink.mr-auto
+        a(href='/user')
+          img.mt10.mb10(src='/img/titip-beli.png', alt='', width='160')
+      .block(class='lg:hidden')
+        button.flex.items-center.px-3.py-2.border.rounded.color-purple.border-purple(onclick='myFunction()')
+          a.icon-bars(href='javascript:void(0);')
+          i.fas.fa-bars
+      .w-full.block(class='lg:flex lg:items-center lg:w-auto')
+        #my-top-nav.top-nav(class='lg:pt-3 lg:pb-3', style='position:relative;')
+          a.no.block.mt-4.mr-4(href='/user/browse', class='lg:inline-block lg:mt-0')
+            | browse
+          a.no.block.mt-4.mr-4(href='/user/post-req', class='lg:ml-4 lg:inline-block lg:mt-0')
+            | post request
+          a.no.block.mt-4.mr-4(href='/user/post-trip', class='lg:ml-4 lg:inline-block lg:mt-0')
+            | post travel
+          a.no.block.mt-4.mr-4(href='/user/inbox', class='lg:ml-4 lg:inline-block lg:mt-0')
+            | inbox
+          a.no.dropbtn.nav-lang.block.mt-4(href='#', class='lg:pt-3 lg:pb-3 lg:pl-6 lg:ml-4 lg:inline-block lg:mt-0', onclick='myDropdown()')
+            | cinderella 
+            i.fa.fa-caret-down
+          #my-dropdown.dropdown-content
+            a(href='/user/dashboard') dashboard
+            a(href='/user/profile') profil
+            a(href='/user/purchase') purchases
+            a(href='/user/trips') trips
+            a(href='/user/credit') credit
+            a(href='/user/wallet') wallet
+            a(href='/user/setting') setting
+            a(href='/user/logout') logout

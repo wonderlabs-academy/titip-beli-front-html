@@ -1,0 +1,50 @@
+html.antialiased(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='icon', href='/img/logo-t.png', type='image/png')
+    title
+      | Titip Beli
+    link(href='https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css', rel='stylesheet')
+    link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.1.0/css/all.css', integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt', crossorigin='anonymous')
+    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Lato:400,700')
+    script(src='https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js')
+    link(href='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', rel='stylesheet')
+    script(src='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js')
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+    link(rel='stylesheet', type='text/css', href='/css/style.css')
+    script(src='/javascripts/script.js')
+  body
+    script.
+      AOS.init();
+    include includes/navbar.pug
+    .destiny.my-8.pt-20.pb-20
+      .container.mx-auto.p-4.shadow-lg
+        .top-text.border-b.border-purple
+          h2.font-bold.pl-2.pt-4.pb-6.mt-4.mb-4(align='center', data-aos='fade-up', data-aos-duration='800')
+            i.fas.fa-plane-departure.color-purple
+            |  POST TRIP
+        form(class='sm:px-4')
+          .mb-8.mt-2(class='md:flex')
+            .form-detail-trip(class='md:w-1/3 sm:w-full sm:py-4 sm:border-b md:border-0')
+              legend.uppercase.tracking-wide.text-sm Detail Perjalanan
+              p.text-xs.font-light.text-red This entire section is required.
+            .mt-2(class='md:flex-1 mb:mt-0 md:px-3')
+              .mb-4
+                label.block.uppercase.tracking-wide.text-xs.font-bold.my-2 Nama Kota/Negara
+                input.shadow.appearance-none.border.rounded.py-2.px-3.text-grey-darker.leading-tight(class='w-2/3', id='', type='text', placeholder='')
+              .mb-4
+                label.block.uppercase.tracking-wide.text-xs.font-bold.my-2 Lama perjalanan
+                input.shadow.appearance-none.border.rounded.py-2.px-3.text-grey-darker.leading-tight(class='w-2/3', id='', type='text', placeholder='')
+              .mb-4(class='md:flex')
+                .mb-4(class='md:flex-1 md:pr-2')
+                  label.block.uppercase.tracking-wide.text-charcoal-darker.text-xs.font-bold.my-2 Tanggal Keberangkatan
+                  input.shadow.appearance-none.border.rounded.w-full.py-2.px-3.text-grey-darker.leading-tight(id='', type='date', placeholder='')
+                .input-detail-trip(class='md:flex-1 md:pl-2')
+                  label.block.uppercase.tracking-wide.text-charcoal-darker.text-xs.font-bold.my-2 Tanggal Kembali
+                  input.shadow.appearance-none.border.rounded.w-full.py-2.px-3.text-grey-darker.leading-tight(id='', type='date', placeholder='')
+          .flex.mb-2.justify-end
+            button.rounded-full.my-2.mx-4.block.text-white.text-sm.shadow-border.bg-purple-dark.text-sm.py-3.px-6.font-sans.tracking-wide.uppercase.font-bold(class='hover:bg-purple-lighter hover:text-purple')
+              | Post Trip
+    include includes/footer.pug

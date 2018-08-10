@@ -1,0 +1,139 @@
+html.antialiased(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='icon', href='/img/logo-t.png', type='image/png')
+    title
+      | Titip Beli
+    link(href='https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css', rel='stylesheet')
+    link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.1.0/css/all.css', integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt', crossorigin='anonymous')
+    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Lato:400,700')
+    script(src='https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js')
+    link(href='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', rel='stylesheet')
+    script(src='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js')
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+    link(rel='stylesheet', type='text/css', href='/css/style.css')
+    script(src='/javascripts/script.js')
+  body
+    script.
+      AOS.init();
+    include includes/navbar.pug
+    .destiny.pt-20
+      .container.mx-auto.pl-2.pb-10
+        .top-text
+          h2.font-bold.pl-2.pt-12.pb-4.mt-4.mb-4(align='center', data-aos='fade-up', data-aos-duration='800')
+            | Request Berdasarkan Negara
+        form.mt-20.mb-20(action='/search', method='get', data-aos='fade-up', data-aos-duration='1000')
+          .flex.flex-wrap
+            .mx-auto(class='lg:w-full sm:mx-auto')
+              .search-container.mx-auto
+                input.search(type='search', name='q', placeholder='Mau titip sesuatu?', autocomplete='off')
+                button(type='submit') search
+        .flex.flex-wrap.pt-2
+          .w-full.p-4(class='lg:w-1/4 md:w-1/2', data-aos='fade-up', data-aos-duration='1200')
+            a#KoreaSelatan(href='/id/search?sourceCountry=KoreaSelatan', style='padding: 0', align='center')
+              .bg-white.rounded.overflow-hidden.shadow-lg
+                img.home-card-img(style='filter: brightness(90%);', src='/img/korea-selatan.jpg')
+              .text-center
+                .destiny-header
+                  p Korea Selatan 
+                //
+                  <div class="destiny-body">
+                  <p class="text-center m-5">100 requests
+                  35 travellers</p>
+                  </div>
+                .hr-bottom.mx-auto
+          .w-full.p-4(class='lg:w-1/4 md:w-1/2', data-aos='fade-up', data-aos-duration='1400')
+            a#KoreaSelatan(href='/id/search?sourceCountry=KoreaSelatan', style='padding: 0', align='center')
+              .bg-white.rounded.overflow-hidden.shadow-lg
+                img.home-card-img(style='filter: brightness(90%);', src='/img/korea-selatan.jpg')
+              .text-center
+                .destiny-header
+                  p Korea Selatan 
+                //
+                  <div class="destiny-body">
+                  <p class="text-center m-5">100 requests
+                  35 travellers</p>
+                  </div>
+                .hr-bottom.mx-auto
+          .w-full.p-4(class='lg:w-1/4 md:w-1/2', data-aos='fade-up', data-aos-duration='1600')
+            a#KoreaSelatan(href='/id/search?sourceCountry=KoreaSelatan', style='padding: 0', align='center')
+              .bg-white.rounded.overflow-hidden.shadow-lg
+                img.home-card-img(style='filter: brightness(90%);', src='/img/korea-selatan.jpg')
+              .text-center
+                .destiny-header
+                  p Korea Selatan 
+                //
+                  <div class="destiny-body">
+                  <p class="text-center m-5">100 requests
+                  35 travellers</p>
+                  </div>
+                .hr-bottom.mx-auto
+          .w-full.p-4(class='lg:w-1/4 md:w-1/2', data-aos='fade-up', data-aos-duration='1800')
+            a#KoreaSelatan(href='/id/search?sourceCountry=KoreaSelatan', style='padding: 0', align='center')
+              .bg-white.rounded.overflow-hidden.shadow-lg
+                img.home-card-img(style='filter: brightness(90%);', src='/img/korea-selatan.jpg')
+              .text-center
+                .destiny-header
+                  p Korea Selatan 
+                //
+                  <div class="destiny-body">
+                  <p class="text-center m-5">100 requests
+                  35 travellers</p>
+                  </div>
+                .hr-bottom.mx-auto
+          .w-full.p-4(class='lg:w-1/4 md:w-1/2', data-aos='fade-up', data-aos-duration='2000')
+            a#KoreaSelatan(href='/id/search?sourceCountry=KoreaSelatan', style='padding: 0', align='center')
+              .bg-white.rounded.overflow-hidden.shadow-lg
+                img.home-card-img(style='filter: brightness(90%);', src='/img/korea-selatan.jpg')
+              .text-center
+                .destiny-header
+                  p Korea Selatan 
+                //
+                  <div class="destiny-body">
+                  <p class="text-center m-5">100 requests
+                  35 travellers</p>
+                  </div>
+                .hr-bottom.mx-auto
+          .w-full.p-4(class='lg:w-1/4 md:w-1/2', data-aos='fade-up', data-aos-duration='2200')
+            a#KoreaSelatan(href='/id/search?sourceCountry=KoreaSelatan', style='padding: 0', align='center')
+              .bg-white.rounded.overflow-hidden.shadow-lg
+                img.home-card-img(style='filter: brightness(90%);', src='/img/korea-selatan.jpg')
+              .text-center
+                .destiny-header
+                  p Korea Selatan 
+                //
+                  <div class="destiny-body">
+                  <p class="text-center m-5">100 requests
+                  35 travellers</p>
+                  </div>
+                .hr-bottom.mx-auto
+          .w-full.p-4(class='lg:w-1/4 md:w-1/2', data-aos='fade-up', data-aos-duration='2400')
+            a#KoreaSelatan(href='/id/search?sourceCountry=KoreaSelatan', style='padding: 0', align='center')
+              .bg-white.rounded.overflow-hidden.shadow-lg
+                img.home-card-img(style='filter: brightness(90%);', src='/img/korea-selatan.jpg')
+              .text-center
+                .destiny-header
+                  p Korea Selatan 
+                //
+                  <div class="destiny-body">
+                  <p class="text-center m-5">100 requests
+                  35 travellers</p>
+                  </div>
+                .hr-bottom.mx-auto
+          .w-full.p-4(class='lg:w-1/4 md:w-1/2', data-aos='fade-up', data-aos-duration='2600')
+            a#KoreaSelatan(href='/id/search?sourceCountry=KoreaSelatan', style='padding: 0', align='center')
+              .bg-white.rounded.overflow-hidden.shadow-lg
+                img.home-card-img(style='filter: brightness(90%);', src='/img/korea-selatan.jpg')
+              .text-center
+                .destiny-header
+                  p Korea Selatan 
+                .hr-bottom.mx-auto
+                //
+                  <div class="destiny-body">
+                  <p class="text-center mt-2">100 requests
+                  <br class="mt-2">35 travellers</p>
+                  </div>
+
+    include includes/footer.pug

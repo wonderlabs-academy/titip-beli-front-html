@@ -1,0 +1,139 @@
+html.antialiased(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='icon', href='/img/logo-t.png', type='image/png')
+    title
+      | Titip Beli
+    link(href='https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css', rel='stylesheet')
+    link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.1.0/css/all.css', integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt', crossorigin='anonymous')
+    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Lato:400,700')
+    script(src='https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js')
+    link(href='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', rel='stylesheet')
+    script(src='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js')
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+    link(rel='stylesheet', type='text/css', href='/css/style.css')
+    script(src='/javascripts/script.js')
+  body.contex
+    script.
+      AOS.init();
+    include includes/navbar.pug
+    .content
+      .container.konteks
+        h2
+          i.fa.fa-box
+          |  Detail Request
+        p.mt-1
+          | Status: 
+          button.status.py-1.px-2(class='hover:bg-purple-dark') On going
+        .container-body.border.rounded.mt-4.mr-4
+          .flex.flex-wrap.left-right.mt-4.ml-4
+            .left.flex-wrap
+              .item-name.mb-4.border-b Nature Republic Aloe Vera
+              .item
+                i.fa.fa-tags.mr-2
+                |  Brand :
+                p.inline Nature Republic
+              .item
+                i.fa.fa-cart-plus.mr-2
+                |  Quantity :
+                p.inline 2
+              .item
+                i.fa.fa-money-bill-wave.mr-2
+                |  Price :
+                p.inline Rp. 200,000,-
+              .item
+                i.fa.fa-bookmark.mr-4
+                |  Caracteristic :
+                p.inline Gel
+              .item
+                i.fa.fa-map-marker-alt.mr-4
+                |  From :
+                p.inline Japan
+              .item
+                i.fa.fa-map-marker-alt.mr-4
+                |  To :
+                p.inline Indonesia
+              .item.mt-4.mb-4
+                i.fa.fa-list.mr-2.mt-4
+                |  Description :
+                p.mt-1 Please ensure that the item is in good condition. Thank you.
+              .item.border-b.mt-4
+              .item
+                .mt-4.text-sm Requested By :
+                .profile.inline-flex.pin-t.pin-r
+                  img.w-10.h-10.rounded-full.mr-2(src='https://pbs.twimg.com/profile_images/885868801232961537/b1F6H4KC_400x400.jpg', alt='Avatar of Jonathan Reinink')
+                  p.text-profile.text-large
+                    b Jonathan
+              .item.mb-6
+                .mt-4.text-sm Offered to help : 
+                .profile.inline-flex.pin-t.pin-r
+                  img.w-10.h-10.rounded-full.mr-2(src='https://tailwindcss.com/img/card-left.jpg', alt='Avatar of Jonathan Reinink')
+                  p.text-profile.text-large
+                    b Jennifer
+            .right.flex-wrap
+              img.image(src='/img/natrep.jpg', alt='Natrep')
+              .item
+                i.fa.fa-money-bill-wave.mr-2.mt-6.mb-2
+                |  Agreed Price + Tip :
+                p.inline Rp. 290,000,-
+              .item
+                button#btn-metoo.btn-too.py-1.px-2(class='w-1/2 hover:bg-purple-dark', rel='modal:open') Me too !
+        .comments.mb-6
+          h2
+            i.fa.fa-comments
+            |  Comments
+          .flex.comment-body.flex.border.rounded.mt-4.w-full
+            .comment-img.flex-wrap
+              img.w-10.h-10.rounded-full.mr-2(src='https://pbs.twimg.com/profile_images/885868801232961537/b1F6H4KC_400x400.jpg', alt='Avatar of Jonathan Reinink')
+            .comment-content.flex-wrap
+              .font-bold Jonathan
+              .date-comment 01 Aug 2018, 00:19 am
+              .mt-2 Hi, please confirm the quantity. Cos the price of one pair is at Rp 120k
+          .flex.comment-body.flex.border.rounded.mt-4.w-full
+            .comment-img.flex-wrap
+              img.w-10.h-10.rounded-full.mr-2(src='https://tailwindcss.com/img/card-left.jpg', alt='Avatar of Jonathan Reinink')
+            .comment-content.flex-wrap
+              .font-bold Jennifer
+              .date-comment 01 Aug 2018, 02:19 am
+              .mt-2 Ohh. Apologies.
+          .btn-comment
+            button.btn-too.py-2.px-4.float-right.mt-4(class='hover:bg-purple-dark', @click='toggleModal') Add Comment
+    #metoo.container.mx-auto(style='display: none')
+      h1 DETAIL REQUEST
+      .form-group.col-lg-6.col-md-6.col-sm-6.col-xs-6
+        .mt-3(class='md:flex')
+          .text-left.mr-2.self-center(class='sm:w-1/6 sm:text-left')
+            label(class='w-1/6') Item Name :
+          .input-detail(class='sm:w-full')
+            input.shadow.appearance-none.border.rounded.py-2.px-3.text-grey-darker.leading-tight(class='w-1/2', type='text', required='')
+        .mt-3(class='md:flex')
+          .text-left.mr-2.self-center(class='sm:w-1/6 sm:text-left')
+            label(class='w-1/6') Category :
+          .input-detail-select(class='sm:w-full')
+            select.appearance-none.border.border-grey-lighter.text-grey-darker.py-3.px-4.pr-8.rounded.leading-tight(class='w-1/2')
+              option New Mexico
+              option Missouri
+              option Texas
+        .mt-3(class='md:flex')
+          .text-left.mr-2.self-center(class='sm:w-1/6 sm:text-left')
+            label Description :
+          .desc-detail(class='sm:w-full')
+            textarea.shadow.appearance-none.border.rounded.py-2.px-3.text-grey-darker.leading-tight(class='w-1/2')
+        .mt-3(class='md:flex')
+          .text-left.mr-2.self-center(class='sm:w-1/6 sm:text-left')
+            label Quantity :
+          .quantity-detail(class='sm:w-full')
+            input.shadow.appearance-none.border.rounded.py-2.px-3.text-grey-darker.leading-tight(class='w-1/2', type='number', required='')
+      .mt-3(class='md:flex')
+        .text-left.mr-2.self-center(class='sm:w-1/6 sm:text-left')
+          label Price :
+        .price-detail(class='sm:w-full')
+          input.shadow.appearance-none.border.rounded.py-2.px-3.text-grey-darker.leading-tight(class='w-1/2', type='number', required='')
+      .mt-3(class='md:flex')
+        .text-left.mr-2.self-center(class='sm:w-1/6 sm:text-left')
+          label Tip :
+        .tip-detail(class='md:w-full')
+          input.shadow.appearance-none.border.rounded.py-2.px-3.text-grey-darker.leading-tight(class='w-1/2', type='number', required='')
+    include includes/footer.pug

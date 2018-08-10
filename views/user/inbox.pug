@@ -1,0 +1,125 @@
+html
+  head
+    title Inbox
+    link(rel='icon', href='/img/logo-t.png', type='image/png')
+    link(href='https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css', rel='stylesheet')
+    link(href='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', rel='stylesheet')
+    script(src='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.2.0/css/all.css', integrity='sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ', crossorigin='anonymous')
+    link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Lato:400,700')
+    link(rel='stylesheet', type='text/css', href='/css/style-1.css')
+  body.bg-grey-lightest
+    script.
+      AOS.init();
+    .container.mx-auto(style='margin-top: 120px; max-width: 1100px; min-height: 500px;')
+      include includes/navbar.pug
+      .m-2.top-text.pb-4(align='center', data-aos='fade-up', data-aos-duration='800')
+        h2  inbox
+      .hidden.mt-2(class='md:block', data-aos='fade-up', data-aos-duration='1000')
+        .container.mx-auto.flex.mt-4
+          .shadow.bg-white.border-b(class='w-1/2', style='margin-right: 5%;')
+            .float-left.text-xl.border-b-2.border-purple.p-4
+              p Notification
+            .float-right.p-3
+              span
+                | Sortir     
+                select(style='min-width: 150px; height: 25px')
+                  option(value='new') New
+                  option(value='pending') Pending
+                  option(value='opel') Opel
+                  option(value='audi') Audi
+          .shadow.bg-white.border-b(class='w-1/2')
+            .float-left.text-xl.border-b-2.border-purple.p-4
+              p Message
+            .float-right.p-4
+              span
+                | Sortir
+                select(style='min-width: 150px; height: 25px;')
+                  option(value='new') New
+                  option(value='pending') Pending
+                  option(value='opel') Opel
+                  option(value='audi') Audi
+      .p-2.container.mx-auto.tab.block(class='md:hidden', style='margin-top: 20px;', data-aos='fade-up', data-aos-duration='1200')
+        ul.list-reset.flex.border-b
+          a#defaultOpen.tablinks.inline-block.py-2.px-4.text-blue.font-semibold.-mb-px.border-l.border-t.border-r.rounded-t(onclick="open1(event, 'activity')") Activity
+          a.tablinks.inline-block.py-2.px-4.text-blue.font-semibold(class='hover:text-blue-darker', onclick="open1(event, 'message')") Message
+      .container.mx-auto.mb-4(class='md:flex', data-aos='fade-up', data-aos-duration='1000')
+        #activity.p-4.tabcontent(class='md:block md:w-1/2 md:bg-white md:shadow', style='margin-right: 5%;line-height: 1.5rem;')
+          a(href='#', style='text-decoration : none; ')
+            .flex.p-4.border-b
+              div
+                img(src='/img/Check_icon.png', style='height: 50px; min-width: 50px')
+              .ml-4.pt-2(style='max-width: 400px;')
+                p
+                  | Mau dapat Rp 100.000 Airfrov credit? Bagikan kode referral ke teman kamu sekarang! Klik di sini.
+          a(href='#', style='text-decoration : none; ')
+            .flex.p-4.border-b
+              div
+                img(src='/img/Check_icon.png', style='height: 50px; min-width: 50px')
+              .ml-4.pt-2(style='max-width: 400px')
+                p
+                  | Mau dapat Rp 100.000 Airfrov credit? Bagikan kode referral ke teman kamu sekarang! Klik di sini.
+          a(href='#', style='text-decoration : none; ')
+            .flex.p-4.border-b
+              div
+                img(src='/img/Check_icon.png', style='height: 50px; min-width: 50px')
+              .ml-4.pt-2(style='max-width: 400px;')
+                p
+                  | Mau dapat Rp 100.000 Airfrov credit? Bagikan kode referral ke teman kamu sekarang! Klik di sini.
+          a(href='#', style='text-decoration : none; ')
+            .flex.p-4.border-b
+              div
+                img(src='/img/Check_icon.png', style='height: 50px; min-width: 50px')
+              .ml-4.pt-2(style='max-width: 400px')
+                p
+                  | Mau dapat Rp 100.000 Airfrov credit? Bagikan kode referral ke teman kamu sekarang! Klik di sini.
+        #message.p-4.tabcontent(class='md:block md:w-1/2 md:bg-white md:shadow', style='line-height: 1.5rem;')
+          a(href='#', style='text-decoration : none;')
+            .flex.border-b.p-4
+              div
+                i.far.fa-envelope(style='font-size: 50px;')
+              .ml-4(style='max-width: 400px')
+                h4 Indah
+                p
+                  | Mau dapat Rp 100.000 Airfrov credit? Bagikan kode referral ke teman kamu sekarang! Klik di sini.
+          a(href='#', style='text-decoration : none;')
+            .flex.border-b.p-4
+              div
+                i.far.fa-envelope(style='font-size: 50px;')
+              .ml-4(style='max-width: 400px')
+                h4 Indah
+                p
+                  | Mau dapat Rp 100.000 Airfrov credit? Bagikan kode referral ke teman kamu sekarang! Klik di sini.
+          a(href='#', style='text-decoration : none;')
+            .flex.border-b.p-4
+              div
+                i.far.fa-envelope(style='font-size: 50px;')
+              .ml-4(style='max-width: 400px')
+                h4 Indah
+                p
+                  | Mau dapat Rp 100.000 Airfrov credit? Bagikan kode referral ke teman kamu sekarang! Klik di sini.
+          a(href='#', style='text-decoration : none;')
+            .flex.p-4
+              div
+                i.far.fa-envelope(style='font-size: 50px;')
+              .ml-4(style='max-width: 400px')
+                h4 Indah
+                p
+                  | Mau dapat Rp 100.000 Airfrov credit? Bagikan kode referral ke teman kamu sekarang! Klik di sini.
+      script.
+        function open1(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.add("hidden");
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace("inline-block py-2 px-4 text-blue font-semibold -mb-px border-l border-t border-r rounded-t", "inline-block py-2 px-4 text-blue hover:text-blue-darker font-semibold");
+        }
+        document.getElementById(cityName).classList.remove("hidden");
+        evt.currentTarget.className += " inline-block py-2 px-4 text-blue font-semibold -mb-px border-l border-t border-r rounded-t";
+        }
+        document.getElementById("defaultOpen").click();
+    include includes/footer.pug

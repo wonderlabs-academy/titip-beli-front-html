@@ -1,0 +1,152 @@
+html.antialiased(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='icon', href='/img/logo-t.png', type='image/png')
+    title
+      | Titip Beli
+    link(href='https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css', rel='stylesheet')
+    link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.1.0/css/all.css', integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt', crossorigin='anonymous')
+    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Lato:400,700')
+    script(src='https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js')
+    link(href='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', rel='stylesheet')
+    script(src='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js')
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+    link(rel='stylesheet', type='text/css', href='/css/style.css')
+    script(src='/javascripts/script.js')
+  body
+    script.
+      AOS.init();
+    include includes/navbar.pug
+    .destiny.my-8.pt-20.pb-20
+      .container.mx-auto.p-4.shadow-lg
+        .top-text.border-b.border-purple
+          h2.font-bold.pl-2.pt-4.pb-6.mt-4.mb-4(align='center', data-aos='fade-up', data-aos-duration='800')
+            i.fas.fa-shopping-cart.color-purple
+            |  POST REQUEST
+        form(class='sm:px-4')
+          .mb-8.mt-2(class='md:flex')
+            .detail-request(class='md:w-1/3 sm:w-full sm:py-4 sm:border-b md:border-0')
+              legend.uppercase.tracking-wide.text-sm Detail Barang
+              p.text-xs.font-light.text-red This entire section is required.
+            .mt-2(class='md:flex-1 mb:mt-0 md:px-3')
+              .mb-4
+                label.block.uppercase.tracking-wide.text-xs.font-bold.my-2 Nama Barang
+                input.shadow.appearance-none.border.rounded.py-2.px-3.text-grey-darker.leading-tight(class='w-2/3', id='', type='text', placeholder='')
+              .mb-4
+                label.block.uppercase.tracking-wide.text-xs.font-bold.my-1 Gambar Barang
+                img.my-1(src='http://skyedazzle.com/wp-content/themes/panama/assets/img/empty/600x600.png', class='w-1/3', alt='', id='')
+                input.shadow.appearance-none.border.rounded.py-2.px-3.text-grey-darker.leading-tight.my-1(class='w-2/3', id='', type='file', placeholder='')
+              .mb-4
+                label.block.uppercase.tracking-wide.text-xs.font-bold.my-1 Jumlah
+                input#count(3='', type='text', appearance-none='', border='', rounded='', w-2='', py-2='', px-3='', text-grey-darker='', leading-tight='', value='1')
+                input#minus(type='button', value='-', onclick='minus()')
+                input#plus(type='button', value='+', onclick='plus()')
+              .mb-4
+                label.block.uppercase.tracking-wide.text-xs.font-bold.my-1 Deskripsi Barang
+                textarea.w-full.shadow.p-4.border-0(placeholder='', rows='6')
+              .mb-4
+                label.block.uppercase.tracking-wide.text-xs.font-bold.my-1 Kategori
+                button.color-purple.p-3.rounded.text-white.shadow-inner
+                  span Show options
+                  svg.h-4(version='1.1', xmlns='http://www.w3.org/2000/svg', viewbox='0 0 129 129', xmlns:xlink='http://www.w3.org/1999/xlink', enable-background='new 0 0 129 129')
+                    g
+                      path(d='m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z')
+                .rounded.shadow-md.mt-2.pin-t.pin-l.min-w-full
+                  ul.list-reset
+                    li
+                      a.px-4.py-2.block.text-black(href='#', class='hover:bg-grey-light') Makanan
+                    li
+                      a.px-4.py-2.block.text-black(href='#', class='hover:bg-grey-light') Kosmetik
+                    li
+                      a.px-4.py-2.block.text-black(href='#', class='hover:bg-grey-light') Mainan
+          .mb-8(class='md:flex')
+            .detail-barang(class='md:w-1/3 sm:w-full sm:py-4 sm:border-b md:border-0')
+              legend.uppercase.tracking-wide.text-sm Karakteristik Barang
+              p.text-xs.font-light.text-red This entire section is required.
+            .mt-2(class='md:flex-1 mb:mt-0 md:px-3')
+              .mb-4(class='md:flex sm:flex sm:justify-between')
+                .detail-penanganan(class='md:flex-1 md:pr-3 sm:flex sm:w-1/2')
+                  label.block.uppercase.tracking-wide.text-charcoal-darker.text-xs.font-bold.my-2 Penanganan Khusus   
+                  span.border.rounded-full.border-grey.flex.items-center.cursor-pointer.w-12.bg-purple-lightest.justify-start
+                    span.rounded-full.border.w-6.h-6.border-grey.shadow-inner.bg-white.shadow
+                .detail-pecah-belah(class='md:flex-1 md:pl-3 sm:flex sm:w-1/2 sm:text-right')
+                  label.block.uppercase.tracking-wide.text-charcoal-darker.text-xs.font-bold.my-2 Pecah Belah   
+                  span.border.rounded-full.border-grey.flex.items-center.cursor-pointer.w-12.bg-purple.justify-end
+                    span.rounded-full.border.w-6.h-6.border-grey.shadow-inner.bg-white.shadow
+              .mb-4
+                label.block.uppercase.tracking-wide.text-xs.font-bold.my-2 Ukuran Barang
+                .inline-flex
+                  button.bg-purple-lightest.text-grey-darkest.py-8.px-3.rounded-l(class='hover:bg-purple-lighter')
+                    | Kecil
+                    br
+                    i.mb-8.mt-8.fas.fa-mobile-alt
+                    br
+                    |                     20cm x 20cm x 20cm
+                  button.bg-purple-lightest.text-grey-darkest.py-8.px-3(class='hover:bg-purple-lighter')
+                    | Sedang
+                    br
+                    i.mb-6.mt-6.fas.fa-shopping-bag.fa-2x
+                    br
+                    |                     20cm x 20cm x 20cm
+                  button.bg-purple-lightest.text-grey-darkest.py-8.px-3.rounded-r(class='hover:bg-purple-lighter')
+                    | Besar
+                    br
+                    i.mb-4.mt-4.fas.fa-suitcase.fa-3x
+                    br
+                    |                     20cm x 20cm x 20cm
+                // </div>
+              .mb-4
+                label.block.uppercase.tracking-wide.text-xs.font-bold.my-2 Berat Barang
+                input.ml-2(type='radio', name='berat', value='1', checked='')
+                |  1 kg
+                input.ml-2(type='radio', name='berat', value='2')
+                |  2 kg
+                input.ml-2(type='radio', name='berat', value='3')
+                |  3 kg  
+                input.ml-2(type='radio', name='berat', value='4')
+                |  4 kg
+                input.ml-2(type='radio', name='berat', value='5')
+                |  5 kg
+          .mb-8(class='md:flex')
+            .info(class='md:w-1/3 sm:w-full sm:py-4 sm:border-b md:border-0')
+              legend.uppercase.tracking-wide.text-sm Info Pembelian
+              p.text-xs.font-light.text-red This entire section is required.
+            .mt-2(class='md:flex-1 mb:mt-0 md:px-3')
+              .mb-4
+                label.block.uppercase.tracking-wide.text-xs.font-bold.my-2 Dibeli Dari
+                input.shadow.appearance-none.border.rounded.py-2.px-3.text-grey-darker.leading-tight(class='w-2/3', id='', type='text', placeholder='')
+              .mb-4
+                label.block.uppercase.tracking-wide.text-xs.font-bold.my-1 Alamat Pengiriman
+                input.shadow.appearance-none.border.rounded.w-full.py-2.px-3.text-grey-darker.leading-tight(id='', type='text', placeholder='')
+          .mb-8(class='md:flex')
+            .detail-harga(class='md:w-1/3 sm:w-full sm:py-4 sm:border-b md:border-0')
+              legend.uppercase.tracking-wide.text-sm Detail Harga
+              p.text-xs.font-light.text-red This entire section is required.
+            .mt-2(class='md:flex-1 mb:mt-0 md:px-3')
+              .mb-4.py-2.flex.bg-purple-lightest
+                .px-1.flex(class='w-2/3')
+                  label.block.uppercase.tracking-wide.text-xs.font-bold.my-2 Harga + Tip
+                  label.block.uppercase.tracking-wide.text-xs.font-bold.my-2.flex.justify-end Rp.
+                .px-1.text-right(class='w-1/3')
+                  input.shadow.appearance-none.border.rounded.w-full.py-2.px-3.text-grey-darker.leading-tight.text-right(id='', type='text', placeholder='', value='195.000')
+              .mb-4.flex
+                .px-1.flex(class='w-2/3')
+                  label.block.uppercase.tracking-wide.text-xs.font-bold.my-2 Biaya Jasa
+                  label.block.uppercase.tracking-wide.text-xs.font-bold.my-2.flex.justify-end Rp.
+                .px-1.text-right(class='w-1/3')
+                  input.shadow.appearance-none.border.rounded.w-full.py-2.px-3.text-grey-darker.leading-tight.text-right(id='', type='text', placeholder='', value='5.800', readonly='')
+              .mb-4.py-2.flex.bg-purple-lightest
+                .px-1.flex(class='w-2/3')
+                  .flex(class='w-1/2')
+                    label.block.uppercase.tracking-wide.text-xs.font-bold.my-2 Total Yang Harus Dibayar
+                  .flex.justify-end(class='w-1/2')
+                    label.block.uppercase.tracking-wide.text-xs.font-bold.my-2.flex.text-right Rp.
+                .px-1.text-right(class='w-1/3')
+                  input.shadow.appearance-none.border.rounded.w-full.py-2.px-3.text-grey-darker.leading-tight.text-right(id='', type='text', placeholder='', value='205.800', readonly='')
+          .flex.mb-2.justify-end
+            button.my-2.rounded-full.block.text-white.text-sm.shadow-border.bg-purple.text-sm.py-3.px-4.font-sans.tracking-wide.uppercase.font-bold(class='md:mx-4 hover:bg-purple-lighter hover:text-purple')
+              | Post Request
+    .hr-1.mt-8
+    include includes/footer.pug

@@ -1,0 +1,22 @@
+.header-area.shadow-md
+  .container.mx-auto
+    nav.flex.items-center.justify-between.flex-wrap.p-4
+      .flex-grow.flex-wrap.flex-shrink.mr-auto
+        a(href='/')
+          img.mt10.mb10(src='/img/titip-beli.png', alt='', width='160')
+      .block(class='lg:hidden')
+        button.flex.items-center.px-3.py-2.border.rounded.color-purple.border-purple(class='hover:color-purple hover:border-purple', onclick='myFunction()')
+          a.icon-bars(href='javascript:void(0);')
+          i.fas.fa-bars
+      .w-full.block(class='lg:flex lg:items-center lg:w-auto')
+        #my-top-nav.top-nav(class='lg:pt-3 lg:pb-3', style='position:relative;')
+          a.no.block.mt-4.mr-4(href='/browse', class='lg:inline-block lg:mt-0')
+            | browse
+          a.no.block.mt-4.mr-4(href='/register', class='lg:ml-4 lg:inline-block lg:mt-0')
+            | post request
+          a.no.block.mt-4.mr-4(href='/register', class='lg:ml-4 lg:inline-block lg:mt-0')
+            | post trip
+          a.no.block.mt-4.mr-4(href='/register', class='lg:ml-4 lg:inline-block lg:mt-0')
+            | sign up
+          a.no.block.mt-4.mr-4(href='/login', class='lg:ml-4 lg:inline-block lg:mt-0')
+            | login
