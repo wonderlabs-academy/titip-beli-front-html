@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #747474;
+  background-color: rgb(252, 250, 253);
+}
+
+.header-area {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background: #fff;
+}
+
+.top-nav {
+  background-color: transparent;
+}
+
+.top-nav a.no {
+  text-transform: uppercase;
+  font-size: .95rem;
+  color: black;
+  text-decoration: none;
+}
+
+.top-nav a:hover {
+  color: #44318D;
+}
+
+
+.icon-bars {
+  color: white;
+  display: none;
+}
+
+.dropbtn {
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  background-color: inherit;
+  font-family: inherit;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:#44318D;
+  border-radius: 5px;
+  min-width: 160px;
+  right: 0;
+  left: auto;
+  text-transform: uppercase;
+  z-index: 1;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+.mt-150 {
+  margin-top: 140px !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.mb-60 {
+  margin-bottom: 60px !important;
+}
+
+.hr {
+  border-top: 1px rgb(168, 168, 168) dashed;
+}
+
+.hr-1 {
+  border-top: 0.06rem rgb(231, 231, 231) solid;
+}
+
+footer {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  background: #44318D;
+  border-top: 1px solid #44318D;
+  margin-top: 10px;
+  padding: 10px 0 10px 0;
+}
+
+span.separator {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+.footer-links a {
+  font-size: .8rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .copyright {
+  font-size: .8rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .about {
+  font-size: .9rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.bg-purple1 {
+  background-color: #44318D;
+}
+
+.text-purple1 {
+  color: #44318D;
+}
