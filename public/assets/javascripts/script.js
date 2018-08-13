@@ -56,10 +56,15 @@ jQuery(function($) {
   // Hook doAnimations on scroll, and trigger a scroll
 	$(window).on('scroll', doAnimations);
   $(window).trigger('scroll');
+
+  // $("#lkn").click(function () {
+  //   $("#form-metoo").show(1000);
+  // });
+
 });
 
 $(document).ready(function() {
   $("#lkn").click(function () {
-    $("#metoo").popup();
+    $("#form-metoo").show(1000);
   });
 })

@@ -563,7 +563,6 @@ input[type="radio"]:checked:nth-of-type(4) + .slide + .nav + .dots .dot:nth-chil
 }
 
 .konteks {
-  /* font-family: Montserrat; */
   color: #44318D;
 }
 
@@ -591,9 +590,9 @@ h2 {
   margin-top: 4em;
 }
 
-.container {
+.container-detail {
   /* margin-top: 2em; */
-  /* margin-right: 2em; */
+  margin-right: 2em;
   margin-left: 7em;
   margin-right: 4em;
   border-left: purple;
@@ -614,20 +613,6 @@ h2 {
   font-size: .875rem;
   line-height: 1;
   align-self: center;
-}
-
-.navbar-left {
-  width: 3em;
-  height: 100%;
-  position: fixed;
-  left: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-  margin-top: 2.85em;
-  text-align: center;
-  background-color: white;
-  /* box-shadow: purple; */
-  box-shadow: 1px 3px 2px rgb(144, 134, 182);
 }
 
 .sidenav {
